@@ -119,14 +119,6 @@ def main():
 def main_future():
     return render_template('futureethereum.html')
 
-@app.route('/optionethereum')
-def main_option():
-    return render_template('optionethereum.html')
-
-@app.route('/swapethereum')
-def main_swap():
-    return render_template('swapethereum.html')
-
 @app.route('/user/<username>')
 def show_user_profile(username):
     # show the user profile for that user
