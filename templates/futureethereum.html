@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
+        <div class="mdl-layout__container has-scrolling-header">
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
+                <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+                    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                    </div>
+                    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                      <h3>Build Derivatives Contracts on the Blockchain</h3>
+                    </div>
+                    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                    </div>
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+                      <a href="#overview" class="mdl-layout__tab is-active">Futures</a>
+                    </div>
+                </header>
+
+          <main class="mdl-layout__content">
+            <div class="mdl-layout__tab-panel is-active" id="overview">
+              <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__supporting-text">
+                    <h4>From / To</h4>
+                      <form action="#">
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                              <input class="mdl-textfield__input" type="text" name="buyeraddress" id="buyeraddress" />
+                              <label class="mdl-textfield__label" for="buyeraddress">Buyer's 40 char ethereum address</label>
+                              <span>d6aaae06717f25095eab8250369a437e549160a4</span>
+                          </div>
+                          <br>
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                              <input class="mdl-textfield__input" type="text" name="selleraddress" id="selleraddress" />
+                              <label class="mdl-textfield__label" for="selleraddress">Seller's 40 char ethereum address</label>
+                              <span>d6aaae06717f25095eab8250369a437e549160a4</span>
+                          </div>
+                      </form>
+                  </div>
+                </div>
+              </section>
+
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                      <div class="mdl-card__supporting-text">
+                        <h4>Commodity Information</h4>
+                          <form id="commoditieslist" name="commoditieslist">
+                              <select id="commodity" onchange="updateText('commodity')">
+                                <option value disabled selected> -- Choose Your Commodity -- </option>
+                                <option value="corn">Corn</option>
+                                <option value="oats">Oats</option>
+                                <option value="roughrice">Rough Rice</option>
+                                <option value="soybeans">Soybeans</option>
+                                <option value="soybeanmeal">Soybean Meal</option>
+                                <option value="soybeanoil">Soybean Oil</option>
+                                <option value="rapeseed">Rapeseed</option>
+                                <option value="wheat">Wheat</option>
+                                <option value="springwheat">Spring Wheat</option>
+                                <option value="redwheat">Red Wheat</option>
+                                <option value="minnesotawheat">Minnesota Wheat</option>
+                                <option value="chicagowheat">Chicago Wheat</option>
+                                <option value="kcwheat">K.C. Wheat</option>
+                                <option value="barley">Barley</option>
+                                <option value="distillerdriedgrains">Distiller Dried Grains</option>
+                                <option value="milk">Milk</option>
+                                <option value="class3milk">Class III Milk</option>
+                                <option value="class4milk">Class IV Milk</option>
+                                <option value="skimmedmilk">Skimmed Milk</option>
+                                <option value="cheese">Cheese</option>
+                                <option value="butter">Butter</option>
+                                <option value="cocoa">Cocoa</option>
+                                <option value="coffeec">Coffee C</option>
+                                <option value="coffeerobustica">Coffee Robustica</option>
+                                <option value="coffeearabica">Coffee Arabica</option>
+                                <option value="cottonno2">Cotton No.2</option>
+                                <option value="sugarno11">Sugar No. 11</option>
+                                <option value="sugarno14">Sugar No. 14</option>
+                                <option value="frozenconcentratedorangejuice">Frozen Concentrated Orange Juice</option>
+                                <option value="wool">Wool</option>
+                                <option value="leanhogs">Lean Hogs</option>
+                                <option value="livecattle">Live Cattle</option>
+                                <option value="feedercattle">Feeder Cattle</option>
+                                <option value="wticrudeoil">WTI Crude Oil</option>
+                                <option value="brentcrude">Brent Crude</option>
+                                <option value="crudeoil">Crude Oil</option>
+                                <option value="gasoil">Gasoil</option>
+                                <option value="ethanol">Ethanol</option>
+                                <option value="kerosene">Kerosene</option>
+                                <option value="naturalgas">Natural Gas</option>
+                                <option value="heatingoil">Heating Oil</option>
+                                <option value="gulfcoastgasoline">Gulf Coast Gasoline</option>
+                                <option value="rbobgasoline">RBOB Gasoline</option>
+                                <option value="propane">Propane</option>
+                                <option value="purifiedterephthalicacid">Purified Terephthalic Acid</option>
+                                <option value="copper">Copper</option>
+                                <option value="lead">Lead</option>
+                                <option value="zinc">Zinc</option>
+                                <option value="tin">Tin</option>
+                                <option value="aluminum">Aluminum</option>
+                                <option value="aluminumalloy">Aluminum Alloy</option>
+                                <option value="nickel">Nickel</option>
+                                <option value="cobalt">Cobalt</option>
+                                <option value="coal">Coal</option>
+                                <option value="molybdenum">Molybdenum</option>
+                                <option value="recycledsteel">Recycled Steel</option>
+                                <option value="steel">Steel</option>
+                                <option value="gold">Gold</option>
+                                <option value="silver">Silver</option>
+                                <option value="platinum">Platinum</option>
+                                <option value="palladium">Palladium</option>
+                                <option value="rhodium">Rhodium</option>
+                                <option value="palmoil">Palm Oil</option>
+                                <option value="rubber">Rubber</option>
+                                <option value="wood">Wood</option>
+                                <option value="polypropylene">Polypropylene</option>
+                                <option value="linearlowdensitypolypropylene">Linear Low Density Polypropylene</option>
+                                <option value="ecxemissions">ECX Emissions</option>
+                                <option value="carbonoffsets">Carbon Offsets</option>
+                                <option value="renewableenergycertificates">Renewable Energy Certificates</option>
+                                <option value="whitecertificates">White Certificates</option>
+                              </select>
+                          </form>
+                          <br>
+                          <form action="#">
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="units" />
+                                  <label class="mdl-textfield__label" for="units">How many would you like?</label>
+                                  <span>Enter a quantity</span>
+                                  <br>
+                                  <span class="mdl-textfield__error">Input must be a number!</span>
+                              </div>
+                          </form>
+                          <br>
+                          <form id="measurementslist" name="measurementslist">
+                              <select id="measurement" onchange="updateText('measurement')">
+                                  <option value disabled selected> -- Unit of Measurement -- </option>
+                                  <option value="gallon">Gallons</option>
+                                  <option value="kiloliter">Kiloliters</option>
+                                  <option value="barrel">Barrels</option>
+                                  <option value="bushel">Bushels</option>
+                                  <option value="cwt">Hundred Weights</option>
+                                  <option value="gram">Grams</option>
+                                  <option value="troyounce">Troy Ounces</option>
+                                  <option value="pound">Pounds</option>
+                                  <option value="kilogram">Kilograms</option>
+                                  <option value="ton">Tons</option>
+                                  <option value="metricton">Metric Tons</option>
+                                  <option value="mmbtu">MMBtus</option>
+                                  <option value="1000boardfoot">1000 Board Foot</option>
+                              </select>
+                          </form>
+                          <br>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any"/>
+                                  <label class="mdl-textfield__label" for="price">Locked in price $</label>
+                                  <span>Enter future/predetermined price</span>
+                              </div>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/>
+                                      <script type="text/javascript">
+                                          function updateText(type) {
+                                              var id = type+'Text';
+                                              document.getElementById(id).value = document.getElementById(type).value;
+                                          }
+                                      </script>
+                              </div>
+                      </div>
+                    </div>
+                </section>
+
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                      <div class="mdl-card__supporting-text">
+                        <h4>Future Date & Margin</h4>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
+                                  <label class="mdl-textfield__label" for="deliverydate">How many days from now?</label>
+                                  <span>Future days to execute contract</span>
+                              </div>
+                              <div>
+                              Unix timestamp: <input type="text" value="" id="deliverydateTimestamp" style="border: 0px;" disabled/>
+                              <script type="text/javascript">
+                                  function createTimestamp(type) {
+                                      var deliveryDate = document.getElementById('deliverydate').value
+                                      var currentUnix = Math.round(+new Date()/1000);
+                                      var deliveryUnix = (parseInt(deliveryDate, 10) * 24 * 60 * 60) + parseInt(currentUnix, 10)
+                                      var id = type+'Timestamp';
+                                      document.getElementById(id).value = deliveryUnix;
+                                  }
+                              </script>
+                              </div>
+                              <br>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="margin" id="margin" step="any"/>
+                                  <label class="mdl-textfield__label" for="margin">Enter the margin</label>
+                                  <span>Margin for this contract</span>
+                              </div>
+                          <br>
+                          <br>
+                          You're Done With The First Part! Time to convert it to Ethereum’s Solidity Language
+                          <br>
+                          <br>
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">
+                              Compile Your Contract
+                          </button>
+                          <br>
+                          <br>
+
+                          <script>
+                              function add() {
+                                  var price = document.getElementById('price').value;
+                                  var units = document.getElementById('units').value;
+                                  var contractValue = parseFloat(price, 10) * parseInt(units, 10);
+                                  var buyerAddress = document.getElementById('buyeraddress').value;
+                                  var sellerAddress = document.getElementById('selleraddress').value;
+                                  var commodity2 = document.getElementById('commodity').value;
+                                  var measurement2 = document.getElementById('measurement').value;
+                                  var unitsString = units.toString();
+                                  var assetString = unitsString+measurement2+commodity2;
+                                  var deliverydateTimestamp2 = document.getElementById('deliverydateTimestamp').value;
+                                  var margin2 = document.getElementById('margin').value;
+                                  document.getElementById("contractfield").value = "contract MyFuture{\n\naddress buyer = msg.sender;\naddress seller = "+buyerAddress+";\nvar contractvalue = "+contractValue+";\nasset= "+assetString+";\nuint constant deliverydate ="+deliverydateTimestamp2+";\nbool cancelled = false;\n"+sellerAddress+".send("+margin2+");\n\nfunction myDeliveryDate(transactionId, spotPrice){\nif((msg.value>= contractvalue) && (now => deliverydate) && cancelled == false) {\n"+sellerAddress+".send(msg.value);\nsendareceiptofthetransactiontotheprimisee;}\n\nfunction myCancel(){\n"+sellerAddress+".send("+margin2+");suicide(buyerAddress);}\n\n}";
+                              }
+                          </script>
+                          <textarea rows="20" cols="80" type="text" id="contractfield" disabled></textarea>
+                      </div>
+                    </div>
+                </section>
+
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <div class="mdl-card mdl-cell mdl-cell--12-col">
+                  <div class="mdl-card__supporting-text">
+                    <h4>Alethzero Instructions</h4>
+                      Alethzero is Ethereum's C++ GUI.
+                      <br>
+                      Download Alethzero here: <a>https://github.com/ethereum/alethzero</a>
+                      <br>
+                      <br>
+                      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                          <thead>
+                            <tr>
+                              <th class="mdl-data-table__cell--non-numeric">Check the boxes below as you complete each step in order.</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="mdl-data-table__cell--non-numeric">1. &nbsp;Send an unaddressed transaction with this code in it's data field</td>
+                            </tr>
+                            <tr>
+                              <td class="mdl-data-table__cell--non-numeric">2. &nbsp;In the amount field, endow your contract with an amount of ethere greater than the sum of your margin contract value</td>
+                            </tr>
+                            <tr>
+                              <td class="mdl-data-table__cell--non-numeric">3. &nbsp;Send the transaction. Doing so will inject your contract onto the blockchain</td>
+                            </tr>
+                            <tr>
+                              <td class="mdl-data-table__cell--non-numeric">4. &nbsp;A transaction address will be generated. Grab the transaction address and spot price.<br> When the delivery date arrives and you wish to execute your contract, paste the transaction address <br>and spot price in the next section.</td>
+                            </tr>
+                          </tbody>
+                      </table>
+                  </div>
+                </div>
+                </section>
+
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Execute the Contract!</h4>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                              <input class="mdl-textfield__input" type="text" name="transactionid" id="transactionid"/>
+                              <label class="mdl-textfield__label" for="transactionid">60 character transaction ID</label>
+                              <span>Example: g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab</span>
+                            </div>
+                            <br>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="spotprice" step="any"/>
+                                <label class="mdl-textfield__label" for="spotprice">Enter spot price $</label>
+                                <span>Current price of the commodity</span>
+                            </div>
+                            <br>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add2()">
+                                Generate code to send transaction
+                            </button>
+                            <br>
+                            <br>
+                            <script>
+                                function add2() {
+                                var transactionId = document.getElementById('transactionid').value;
+                                var spotPrice = document.getElementById('spotprice').value;
+                                document.getElementById("contractfield2").value = "contract MyMaturity{\n\nMyFuture feed;\n\nfunction setFeed(address addr){feed = MyFuture(addr);}\n\nfunction callFeed(){feed.MyDeliveryDate();}\n\ncallFeed("+transactionId+","+spotPrice+");\n\n}";
+                                document.getElementById("contractfield3").value = "contract myCancellation{\n\nMyFuture feed;\n\nfunction setFeed(address add){feed = MyFuture(addr);}\n\nfunction callFeed(){feed.myCancel();}\n\ncallFeed();\n\n}";
+                                }
+                            </script>
+                            <textarea rows="15" cols="80" type="text" id="contractfield2" disabled></textarea>
+                            <br>
+                            <br>
+                            <br>
+                            <p style="font-size:16px">Final step :) paste this code in <a>www.blah-blah-blah.com</a></p>
+                        </div>
+                    </div>
+                </section>
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Cancellation</h4>
+                            Note: if you want to cancel your future's contract, send a transaction, addressed to the transaction ID and paste the code below into the data field
+                            <br>
+                            <br>
+                            <textarea rows="12" cols="80" type="text" id="contractfield3" disabled></textarea>
+                        </div>
+                    </div>
+                </section>
+            </div>
+          </main>
+        </div>
+    </div>
+    </body>
+</html>
