@@ -115,6 +115,10 @@ def logout():
 def main():
     return render_template('index.html')
 
+@app.route('/managecontracts')
+def main_future():
+    return render_template('managecontracts.html')
+
 @app.route('/futureethereum')
 def main_future():
     return render_template('futureethereum.html')
