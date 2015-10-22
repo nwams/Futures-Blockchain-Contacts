@@ -3,29 +3,43 @@
     <head>
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
-        <div class="mdl-layout__container has-scrolling-header">
+                    <div><img src = https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=800&q=50&w=1200 id="bgpic" alt=""></div>
+
+    <div class="mdl-layout__container has-scrolling-header">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                     </div>
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                      <h3>Build Derivatives Contracts on the Blockchain</h3>
+                      <h3>Build Futures Contracts on the Blockchain</h3>
                     </div>
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                     </div>
                     <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                      <a href="#overview" class="mdl-layout__tab is-active">Futures</a>
-                    </div>
+                        <a href="#overview" class="mdl-layout__tab is-active">Create Contract</a>
+                        <a href="#features" class="mdl-layout__tab">Approve Contracts</a>
+                        <a href="#features" class="mdl-layout__tab">Manage Contracts</a>
+                        </div>
                 </header>
-
           <main class="mdl-layout__content">
             <div class="mdl-layout__tab-panel is-active" id="overview">
-              <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Welcome Zayd</h4>
+                            <div><p>Start creating your smart contract.</p></div>
+                            <div><p>Account number: d6aaae06717f25095eab8250369a437e549160a4</p></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
                   <div class="mdl-card__supporting-text">
                     <h4>From / To</h4>
@@ -315,6 +329,8 @@
                         </div>
                     </div>
                 </section>
+                <br>
+                <br>
             </div>
           </main>
         </div>

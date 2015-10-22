@@ -1,0 +1,22 @@
+#bgpic2{
+    background-image: url(https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=800&q=50&w=1200);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+
+}
+
+#bgpic {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+	/* Preserve aspet ratio */
+    width: 100%;
+    height: auto;
+
+}
