@@ -1,12 +1,13 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
-
-<head>
-    <title>Blockchain Futures</title>
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
-</head>
+    <head>
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
 
 <body>
 
@@ -70,8 +71,9 @@
         <td> Chicago Board of Trade (CBOT) </td>
    </tr>
 
+    </body>
 
 </table>
 
+</html>
 
-{% endblock %}
