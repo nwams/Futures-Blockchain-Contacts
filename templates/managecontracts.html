@@ -2,12 +2,8 @@
 
 {% block content %}
 
-{% if current_user.is_authenticated %}
-  You are logged in as: {{ current_user.email }}!
-{% endif %}
-
 <head>
-    <title>Blockchain Derivatives Builder</title>
+    <title>Blockchain Futures</title>
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
 </head>
@@ -30,23 +26,51 @@
             </nav>
         </div>
 
-  <h1>My Contracts</h1>
-{% for c in contracts %}
-  <p>{{ c.blockchainderivativesid }} -- {{ c.buyerethereumaddress }} -- {{ c.sellerethereumaddress }} -- {{ c.deliverydate }} -- {{ c.numberofunits }} -- {{ c.commodityname }} -- {{ c.price }} -- {{ c.margin }} -- {{ c.soliditycodeinitial }}</p>
-{% endfor %}
-
+  <h1>Manage Contracts</h1>
 
 <table>
-{% for c in contracts %}
    <tr>
-        <th> Price:    </th>
-        <td> {{  c.price }} </td>
+        <th> Buyer Ethereum Address:    </th>
+        <td> 0x036a03fc47084741f83938296a1c8ef67f6e34fa</td>
+        <th> Seller Ethereum Address:    </th>
+        <td> 0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5</td>
+        <th> Ethereum Transaction Address:    </th>
+        <td> g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab </td>
+        <th> Commodity:    </th>
+        <td> Nachos, Barrels </td>
+        <th> Units:    </th>
+        <td> 1000 </td>
+        <th> Future Price:    </th>
+        <td> 33 USD per Barrel</td>
         <th> Margin:    </th>
-        <td> {{  c.margin }} </td>
-        <th> Price:    </th>
-        <td> {{  c.soliditycodeinitial }} </td>
+        <td> 2 </td>
+        <th> Delivery Date:    </th>
+        <td> January 2, 2016 </td>
+        <th> Spot Price Source:    </th>
+        <td> New York Mercantile Exchange  (NYMEX) </td>
    </tr>
-{% endfor %}
+   <tr>
+        <th> Buyer Ethereum Address:    </th>
+        <td> 0x036a03fc47084741f83938296a1c8ef67f6e34fa</td>
+        <th> Seller Ethereum Address:    </th>
+        <td> 0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5</td>
+        <th> Ethereum Transaction Address:    </th>
+        <td> g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab </td>
+        <th> Commodity:    </th>
+        <td> Bunny Skulls, Tons </td>
+        <th> Units:    </th>
+        <td> 1 </td>
+        <th> Future Price:    </th>
+        <td> 3 USD per Ton</td>
+        <th> Margin:    </th>
+        <td> .25 </td>
+        <th> Delivery Date:    </th>
+        <td> November 15, 2016 </td>
+        <th> Spot Price Source:    </th>
+        <td> Chicago Board of Trade (CBOT) </td>
+   </tr>
+
+
 </table>
 
 
