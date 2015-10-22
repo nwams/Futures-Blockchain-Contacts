@@ -116,7 +116,7 @@ def main():
     return render_template('index.html')
 
 @app.route('/managecontracts')
-def main_future():
+def manage_contracts():
     return render_template('managecontracts.html')
 
 @app.route('/futureethereum')
@@ -134,7 +134,7 @@ def show_user_profile(username):
 #db.session.commit()
 
 if __name__ == '__main__':
-    #app.debug = True
+    app.debug = True
     #app.run(debug=True)
     #app.run(debug=True, port=5001)
     #app.run(host='0.0.0.0')   #turn this on later when you go to another server
