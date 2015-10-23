@@ -66,7 +66,7 @@
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                       <div class="mdl-card__supporting-text">
-                        <h4>Commodity Information</h4>
+                        <h4>Underlying Commodity Information</h4>
                           <form id="commoditieslist" name="commoditieslist">
                               <select id="commodity" onchange="updateText('commodity')">
                                 <option value disabled selected> -- Choose Your Commodity -- </option>
@@ -147,9 +147,8 @@
                           <form action="#">
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                   <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="units" />
-                                  <label class="mdl-textfield__label" for="units">How many would you like?</label>
-                                  <span>Enter a quantity</span>
-                                  <br>
+                                  <label class="mdl-textfield__label" for="units">Please enter a quantity</label>
+                                  <!--span>Please enter quantity</span-->
                                   <span class="mdl-textfield__error">Input must be a number!</span>
                               </div>
                           </form>
@@ -175,11 +174,11 @@
                           <br>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                   <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue()"/>
-                                  <label class="mdl-textfield__label" for="price">Locked in price $</label>
-                                  <span>Enter future/predetermined price</span>
+                                  <label class="mdl-textfield__label" for="price">Trading Price of Futures Contract $</label>
+                                  <!--span>Enter future/predetermined price</span-->
                               </div>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/></p>
+                                  <p style="font-size: 16px">per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/></p>
                                       <script type="text/javascript">
                                           function updateText(type) {
                                               var id = type+'Text';
@@ -206,11 +205,11 @@
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                       <div class="mdl-card__supporting-text">
-                        <h4>Future Date & Margin</h4>
+                        <h4>Expiry Date & Margin</h4>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
-                                  <label class="mdl-textfield__label" for="deliverydate">How many days from now?</label>
-                                  <span>Future days to execute contract</span>
+                                  <input class="mdl-textfield__input" type="date" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
+                                  <label class="mdl-textfield__label" for="deliverydate"></label>
+                                  <span>Expiry date</span>
                               </div>
                               <div>
                               Unix timestamp: <input type="text" value="" id="deliverydateTimestamp" style="border: 0px;" disabled/>
@@ -231,9 +230,7 @@
                                   <span>Margin for this contract</span>
                               </div>
                           <br>
-                          <br>
-                          You're Done With The First Part! Time to convert it to Ethereum’s Solidity Language
-                          <br>
+                          
                           <br>
                           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">
                               Compile Your Contract
