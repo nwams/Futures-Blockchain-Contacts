@@ -10,9 +10,39 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
 
-<div id="blanket" style="display:none"></div> <div id="popUpDiv" style="display:none"> <a href="#" onclick="popup('popUpDiv')" >Click to Close CSS Pop Up</a> </div> <a href="#" onclick="popup('popUpDiv')">Click to Open CSS Pop Up</a> 
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+         setTimeout(PopUp(),5000); // invoke Popup function after 5 seconds 
+  });
+   </script>
 
-    <body onload="popup('popUpDiv')" class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
+
+<script type="text/javascript">
+    function PopUp(hideOrshow) {
+    if (hideOrshow == 'hide') document.getElementById('ac-wrapper').style.display = "none";
+    else document.getElementById('ac-wrapper').removeAttribute('style');
+}
+window.onload = function () {
+    setTimeout(function () {
+        PopUp('show');
+    }, 500);
+}
+</script>
+
+<div id="ac-wrapper" style='display:none'>
+    <div id="popup">
+        <center>
+             <h2>You have a  contract to approve</h2>    
+            <input type="submit" name="submit" value="Okay" onClick="PopUp('hide')" />
+        </center>
+    </div>
+</div>
+
+
+
+
+
+<body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
                     <div><img src = https://picjumbo.imgix.net/IMG_5539.jpg?q=40&w=1650&sharp=30 id="bgpic" alt=""></div>
     <div class="mdl-layout__container has-scrolling-header">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
