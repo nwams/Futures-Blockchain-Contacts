@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
+<!-- saved from url=(0036)http://localhost:5000/futureethereum -->
+<html lang="en" class="mdl-js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./futureethereum_files/material.min.css">
+        <link rel="stylesheet" type="text/css" href="./futureethereum_files/style.css">
+        <link rel="stylesheet" type="text/css" href="./futureethereum_files/home.css">
+        <script src="./futureethereum_files/material.min.js"></script>
+        <script src="./futureethereum_files/jquery.min.js"></script>
 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    </head>
+        <link href="./futureethereum_files/css" rel="stylesheet">
+        <link rel="stylesheet" href="./futureethereum_files/icon">
     <script type="text/javascript">
     var commoditiesArray = new Array();
     function test()
@@ -51,9 +50,10 @@
       }
     }
     test();
-    </script>
+    </script></head>
+    
     <body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
-                    <div><img src = https://picjumbo.imgix.net/IMG_5539.jpg?q=40&w=1650&sharp=30 id="bgpic" alt=""></div>
+                    <div><img src="./futureethereum_files/IMG_5539.jpg" id="bgpic" alt=""></div>
     <div class="mdl-layout__container has-scrolling-header">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
 
@@ -65,10 +65,10 @@
                     </div>
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                     </div>
-                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                        <a href="#overview" class="mdl-layout__tab is-active">Create Contract</a>
-                        <a href="#features" class="mdl-layout__tab">Approve Contracts</a>
-                        <a href="/managecontracts" class="mdl-layout__tab">Manage Contracts</a>
+                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark" data-upgraded=",MaterialRipple">
+                        <a href="http://localhost:5000/futureethereum#overview" class="mdl-layout__tab is-active">Create Contract</a>
+                        <a href="http://localhost:5000/futureethereum#features" class="mdl-layout__tab">Approve Contracts</a>
+                        <a href="http://localhost:5000/managecontracts" class="mdl-layout__tab">Manage Contracts</a>
                         </div>
                 </header>
           <main class="mdl-layout__content">
@@ -88,15 +88,15 @@
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
                   <div class="mdl-card__supporting-text">
                     <h4>From / To</h4>
-                      <form action="#">
-                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" name="buyeraddress" id="buyeraddress" />
+                      <form action="http://localhost:5000/futureethereum#">
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                              <input class="mdl-textfield__input" type="text" name="buyeraddress" id="buyeraddress">
                               <label class="mdl-textfield__label" for="buyeraddress">Buyer's 40 char ethereum address</label>
                               <span>d6aaae06717f25095eab8250369a437e549160a4</span>
                           </div>
                           <br>
-                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" name="selleraddress" id="selleraddress" />
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                              <input class="mdl-textfield__input" type="text" name="selleraddress" id="selleraddress">
                               <label class="mdl-textfield__label" for="selleraddress">Seller's 40 char ethereum address</label>
                               <span>d6aaae06717f25095eab8250369a437e549160a4</span>
                           </div>
@@ -111,14 +111,14 @@
                         <h4>Commodity Information</h4>
                           <form id="commoditieslist" name="commoditieslist">
                               <select id="commodity" onchange="updateText()">
-                                <option value disabled selected> -- Choose Your Commodity -- </option>
+                                <option value="" disabled="" selected=""> -- Choose Your Commodity -- </option>
 
-                              </select>
+                              <option value="South American Soybeans">South American Soybeans</option><option value="Corn">Corn</option><option value="Soybean Crush">Soybean Crush</option><option value="Wheat (Kansas)">Wheat (Kansas)</option><option value="Hard Red Spring Wheat">Hard Red Spring Wheat</option><option value="Oats">Oats</option><option value="Rough Rice">Rough Rice</option><option value="Soybeans">Soybeans</option><option value="Soybean Meal">Soybean Meal</option><option value="Wheat">Wheat</option><option value="Corn Mini">Corn Mini</option><option value="Soybeans Mini">Soybeans Mini</option><option value="Mini Wheat">Mini Wheat</option><option value="Ethanol">Ethanol</option><option value="Brent Crude Oil">Brent Crude Oil</option><option value="Light Crude Oil (Pit)">Light Crude Oil (Pit)</option><option value="Gas - Oil">Gas - Oil</option><option value="Nat. Gas Financial Futures (Last Day) (Globex)">Nat. Gas Financial Futures (Last Day) (Globex)</option><option value="Heating Oil">Heating Oil</option><option value="Natural Gas Financial Futures (Globex)">Natural Gas Financial Futures (Globex)</option><option value="PJM Electricity">PJM Electricity</option><option value="Natural Gas">Natural Gas</option><option value="Natural Gas miNY">Natural Gas miNY</option><option value="Heating Oil miNY">Heating Oil miNY</option><option value="Crude Oil EmiNY">Crude Oil EmiNY</option><option value="NYH RBOB Gasoline miNY">NYH RBOB Gasoline miNY</option><option value="NYH RBOB Unleaded Gas">NYH RBOB Unleaded Gas</option><option value="NYH RBOB Gasoline Financial Futures (Globex)">NYH RBOB Gasoline Financial Futures (Globex)</option><option value="Crude Oil Financial Futures (Globex)">Crude Oil Financial Futures (Globex)</option></select>
                           </form>
                           <br>
-                          <form action="#">
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="units" />
+                          <form action="http://localhost:5000/futureethereum#">
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="units">
                                   <label class="mdl-textfield__label" for="units">How many would you like?</label>
                                   <span>Enter a quantity</span>
                                   <br>
@@ -127,13 +127,13 @@
                           </form>
 
 
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue()"/>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue()">
                                   <label class="mdl-textfield__label" for="price">Locked in price $</label>
                                   <span>Enter future/predetermined price</span>
                               </div>
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px; width: 200px" disabled/></p>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" data-upgraded=",MaterialTextfield">
+                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px; width: 200px" disabled=""></p>
                                       <script type="text/javascript">
                                           function updateText() {
                                             var option = document.getElementById("commodity").value
@@ -142,7 +142,7 @@
                                       </script>
                               </div>
                             <div>
-                                <p style="font-size:16px"><i class="material-icons indigo500">work</i> Contract value: <input type="text" value="" id="contractValueText" size="13" style="border: 0px;" disabled/></p>
+                                <p style="font-size:16px"><i class="material-icons indigo500">work</i> Contract value: <input type="text" value="" id="contractValueText" size="13" style="border: 0px;" disabled=""></p>
                                 <script type="text/javascript">
                                     function updateContractValue() {
                                         var price = document.getElementById('price').value;
@@ -162,14 +162,14 @@
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                       <div class="mdl-card__supporting-text">
-                        <h4>Future Date & Margin</h4>
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
+                        <h4>Future Date &amp; Margin</h4>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp(&#39;deliverydate&#39;)">
                                   <label class="mdl-textfield__label" for="deliverydate">How many days from now?</label>
                                   <span>Future days to execute contract</span>
                               </div>
                               <div>
-                              Unix timestamp: <input type="text" value="" id="deliverydateTimestamp" style="border: 0px;" disabled/>
+                              Unix timestamp: <input type="text" value="" id="deliverydateTimestamp" style="border: 0px;" disabled="">
                               <script type="text/javascript">
                                   function createTimestamp(type) {
                                       var deliveryDate = document.getElementById('deliverydate').value
@@ -181,8 +181,8 @@
                               </script>
                               </div>
                               <br>
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="margin" id="margin" step="any"/>
+                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="margin" id="margin" step="any">
                                   <label class="mdl-textfield__label" for="margin">Enter the margin</label>
                                   <span>Margin for this contract</span>
                               </div>
@@ -191,9 +191,9 @@
                           You're Done With The First Part! Time to convert it to Ethereum’s Solidity Language
                           <br>
                           <br>
-                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()" data-upgraded=",MaterialButton,MaterialRipple">
                               Compile Your Contract
-                          </button>
+                          <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
                           <br>
                           <br>
 
@@ -213,7 +213,7 @@
                                   document.getElementById("contractfield").value = "contract MyFuture{\n\naddress buyer = msg.sender;\naddress seller = "+buyerAddress+";\nvar contractvalue = "+contractValue+";\nasset= "+assetString+";\nuint constant deliverydate ="+deliverydateTimestamp2+";\nbool cancelled = false;\n"+sellerAddress+".send("+margin2+");\n\nfunction myDeliveryDate(transactionId, spotPrice){\nif((msg.value>= contractvalue) && (now => deliverydate) && cancelled == false) {\n"+sellerAddress+".send(msg.value);\nsendareceiptofthetransactiontotheprimisee;}\n\nfunction myCancel(){\n"+sellerAddress+".send("+margin2+");suicide(buyerAddress);}\n\n}";
                               }
                           </script>
-                          <textarea rows="20" cols="80" type="text" id="contractfield" disabled></textarea>
+                          <textarea rows="20" cols="80" type="text" id="contractfield" disabled=""></textarea>
                       </div>
                     </div>
                 </section>
@@ -227,24 +227,24 @@
                       Download Alethzero here: <a>https://github.com/ethereum/alethzero</a>
                       <br>
                       <br>
-                      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp is-upgraded" data-upgraded=",MaterialDataTable">
                           <thead>
                             <tr>
-                              <th class="mdl-data-table__cell--non-numeric">Check the boxes below as you complete each step in order.</th>
+                              <th><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></th><th class="mdl-data-table__cell--non-numeric">Check the boxes below as you complete each step in order.</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
-                              <td class="mdl-data-table__cell--non-numeric">1. &nbsp;Send an unaddressed transaction with this code in it's data field</td>
+                              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">1. &nbsp;Send an unaddressed transaction with this code in it's data field</td>
                             </tr>
                             <tr>
-                              <td class="mdl-data-table__cell--non-numeric">2. &nbsp;In the amount field, endow your contract with an amount of ethere greater than the sum of your margin contract value</td>
+                              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">2. &nbsp;In the amount field, endow your contract with an amount of ethere greater than the sum of your margin contract value</td>
                             </tr>
                             <tr>
-                              <td class="mdl-data-table__cell--non-numeric">3. &nbsp;Send the transaction. Doing so will inject your contract onto the blockchain</td>
+                              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">3. &nbsp;Send the transaction. Doing so will inject your contract onto the blockchain</td>
                             </tr>
                             <tr>
-                              <td class="mdl-data-table__cell--non-numeric">4. &nbsp;A transaction address will be generated. Grab the transaction address and spot price.<br> When the delivery date arrives and you wish to execute your contract, paste the transaction address <br>and spot price in the next section.</td>
+                              <td><label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect mdl-data-table__select mdl-js-ripple-effect--ignore-events is-upgraded" data-upgraded=",MaterialCheckbox,MaterialRipple"><input type="checkbox" class="mdl-checkbox__input"><span class="mdl-checkbox__focus-helper"></span><span class="mdl-checkbox__box-outline"><span class="mdl-checkbox__tick-outline"></span></span><span class="mdl-checkbox__ripple-container mdl-js-ripple-effect mdl-ripple--center" data-upgraded=",MaterialRipple"><span class="mdl-ripple"></span></span></label></td><td class="mdl-data-table__cell--non-numeric">4. &nbsp;A transaction address will be generated. Grab the transaction address and spot price.<br> When the delivery date arrives and you wish to execute your contract, paste the transaction address <br>and spot price in the next section.</td>
                             </tr>
                           </tbody>
                       </table>
@@ -256,21 +256,21 @@
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
                             <h4>Execute the Contract!</h4>
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" name="transactionid" id="transactionid"/>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                              <input class="mdl-textfield__input" type="text" name="transactionid" id="transactionid">
                               <label class="mdl-textfield__label" for="transactionid">60 character transaction address</label>
                               <span>Example: g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab</span>
                             </div>
                             <br>
-                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="spotprice" step="any"/>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-upgraded" data-upgraded=",MaterialTextfield">
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="spotprice" step="any">
                                 <label class="mdl-textfield__label" for="spotprice">Enter spot price $</label>
                                 <span>Current price of the commodity</span>
                             </div>
                             <br>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add2()">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add2()" data-upgraded=",MaterialButton,MaterialRipple">
                                 Generate code to send transaction
-                            </button>
+                            <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
                             <br>
                             <br>
                             <script>
@@ -281,7 +281,7 @@
                                 document.getElementById("contractfield3").value = "contract myCancellation{\n\nMyFuture feed;\n\nfunction setFeed(address add){feed = MyFuture(addr);}\n\nfunction callFeed(){feed.myCancel();}\n\ncallFeed();\n\n}";
                                 }
                             </script>
-                            <textarea rows="15" cols="80" type="text" id="contractfield2" disabled></textarea>
+                            <textarea rows="15" cols="80" type="text" id="contractfield2" disabled=""></textarea>
                             <br>
                             <br>
                             <br>
@@ -296,7 +296,7 @@
                             Note: if you want to cancel your future's contract, send a transaction, addressed to the transaction ID and paste the code below into the data field
                             <br>
                             <br>
-                            <textarea rows="12" cols="80" type="text" id="contractfield3" disabled></textarea>
+                            <textarea rows="12" cols="80" type="text" id="contractfield3" disabled=""></textarea>
                         </div>
                     </div>
                 </section>
@@ -306,5 +306,5 @@
           </main>
         </div>
     </div>
-    </body>
-</html>
+    
+</body></html>
