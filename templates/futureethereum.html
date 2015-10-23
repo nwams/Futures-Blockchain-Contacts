@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
@@ -8,11 +9,12 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
+
     <body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
                     <div><img src = https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=800&q=50&w=1200 id="bgpic" alt=""></div>
-
     <div class="mdl-layout__container has-scrolling-header">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
+
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
                     <div class="mdl-layout--large-screen-only mdl-layout__header-row">
                     </div>
@@ -24,7 +26,7 @@
                     <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                         <a href="#overview" class="mdl-layout__tab is-active">Create Contract</a>
                         <a href="#features" class="mdl-layout__tab">Approve Contracts</a>
-                        <a href="#features" class="mdl-layout__tab">Manage Contracts</a>
+                        <a href="/managecontracts" class="mdl-layout__tab">Manage Contracts</a>
                         </div>
                 </header>
           <main class="mdl-layout__content">
@@ -32,6 +34,7 @@
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
+
                             <h4>Welcome Zayd</h4>
                             <div><p>Start creating your smart contract.</p></div>
                             <div><p>Account number: d6aaae06717f25095eab8250369a437e549160a4</p></div>
