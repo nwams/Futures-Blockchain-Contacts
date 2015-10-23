@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4460d397-b158-4700-892d-6bc8f8509215" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/futureethereum.html" afterPath="$PROJECT_DIR$/templates/futureethereum.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/managecontracts.html" afterPath="$PROJECT_DIR$/templates/managecontracts.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -36,8 +35,8 @@
       <file leaf-file-name="futureethereum.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/futureethereum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.366197" vertical-offset="6879" max-vertical-offset="9612">
-              <caret line="261" column="51" selection-start-line="261" selection-start-column="50" selection-end-line="261" selection-end-column="51" />
+            <state vertical-scroll-proportion="-2.366197" vertical-offset="7068" max-vertical-offset="9828">
+              <caret line="268" column="51" selection-start-line="268" selection-start-column="51" selection-end-line="268" selection-end-column="51" />
               <folding>
                 <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -56,8 +55,8 @@
       <file leaf-file-name="managecontracts.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/managecontracts.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3853755" vertical-offset="2802" max-vertical-offset="5103">
-              <caret line="111" column="101" selection-start-line="111" selection-start-column="87" selection-end-line="111" selection-end-column="101" />
+            <state vertical-scroll-proportion="0.59881425" vertical-offset="912" max-vertical-offset="5049">
+              <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#col#0;n#table#0;n#div#0;n#div#0;n#section#1;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#col#1;n#table#0;n#div#0;n#div#0;n#section#1;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -125,9 +124,9 @@
       <list>
         <option value="$PROJECT_DIR$/static/material.min.css" />
         <option value="$PROJECT_DIR$/static/home.css" />
-        <option value="$PROJECT_DIR$/templates/managecontracts.html" />
         <option value="$PROJECT_DIR$/static/style.css" />
         <option value="$PROJECT_DIR$/templates/futureethereum.html" />
+        <option value="$PROJECT_DIR$/templates/managecontracts.html" />
       </list>
     </option>
   </component>
@@ -487,7 +486,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.16530278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16530278" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -771,8 +770,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/futureethereum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.366197" vertical-offset="6879" max-vertical-offset="9612">
-          <caret line="261" column="51" selection-start-line="261" selection-start-column="50" selection-end-line="261" selection-end-column="51" />
+        <state vertical-scroll-proportion="-2.366197" vertical-offset="7068" max-vertical-offset="9828">
+          <caret line="268" column="51" selection-start-line="268" selection-start-column="51" selection-end-line="268" selection-end-column="51" />
           <folding>
             <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -789,8 +788,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/managecontracts.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3853755" vertical-offset="2802" max-vertical-offset="5103">
-          <caret line="111" column="101" selection-start-line="111" selection-start-column="87" selection-end-line="111" selection-end-column="101" />
+        <state vertical-scroll-proportion="0.59881425" vertical-offset="912" max-vertical-offset="5049">
+          <caret line="45" column="68" selection-start-line="45" selection-start-column="68" selection-end-line="45" selection-end-column="68" />
           <folding>
             <element signature="n#style#0;n#col#0;n#table#0;n#div#0;n#div#0;n#section#1;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#col#1;n#table#0;n#div#0;n#div#0;n#section#1;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
