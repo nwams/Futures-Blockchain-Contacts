@@ -76,7 +76,7 @@
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
 
-                            <h4>Welcome Zayd</h4>
+                            <h4>Welcome Nwamaka</h4>
                             <p>Your account number: d6aaae06717f25095eab8250369a437e549160a4</p>
                             <div>Start creating your Smart Contract.</div>
                         </div>
@@ -181,9 +181,9 @@
                         <h4>Expiry Date</h4>
 
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
-                                  <label class="mdl-textfield__label" for="deliverydate">How many days from now?</label>
-                                  <span>Future days to execute contract</span>
+                                  <input class="mdl-textfield__input" type="date" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
+                                  <label class="mdl-textfield__label" for="deliverydate"></label>
+                                  <span>Delivery date</span>
                               </div>
                               <div>
                               Unix timestamp: <input type="text" value="" id="deliverydateTimestamp" style="border: 0px;" disabled/>
@@ -198,11 +198,6 @@
                               </script>
                               </div>
                               <br>
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" name="margin" id="margin" step="any"/>
-                                  <label class="mdl-textfield__label" for="margin">Enter the margin</label>
-                                  <span>Margin for this contract</span>
-                              </div>
                           <br>
                           <br>
                           You're Done With The First Part! Time to convert it to Ethereum’s Solidity Language
@@ -222,20 +217,31 @@
                                   var buyerAddress = document.getElementById('buyeraddress').value;
                                   var sellerAddress = document.getElementById('selleraddress').value;
                                   var commodity2 = document.getElementById('commodity').value;
-                                  var measurement2 = document.getElementById('measurement').value;
+                                  var measurement2 = document.getElementById('measurementText').value;
                                   var unitsString = units.toString();
                                   var assetString = unitsString+measurement2+commodity2;
                                   var deliverydateTimestamp2 = document.getElementById('deliverydateTimestamp').value;
-                                  var margin2 = document.getElementById('margin').value;
+                                  var margin2 = document.getElementById('marginValueText').value;
                                   document.getElementById("contractfield").value = "contract MyFuture{\n\naddress buyer = msg.sender;\naddress seller = "+buyerAddress+";\nvar contractvalue = "+contractValue+";\nasset= "+assetString+";\nuint constant deliverydate ="+deliverydateTimestamp2+";\nbool cancelled = false;\n"+sellerAddress+".send("+margin2+");\n\nfunction myDeliveryDate(transactionId, spotPrice){\nif((msg.value>= contractvalue) && (now => deliverydate) && cancelled == false) {\n"+sellerAddress+".send(msg.value);\nsendareceiptofthetransactiontotheprimisee;}\n\nfunction myCancel(){\n"+sellerAddress+".send("+margin2+");suicide(buyerAddress);}\n\n}";
                               }
                           </script>
                           <textarea rows="20" cols="80" type="text" id="contractfield" disabled></textarea>
+
+                          <br>
+                          <br>
+                          <div>
+                              <br>
+                              Contract will be sent to seller for approval.
+                              <br>
+                              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">
+                              Submit
+                              </button>
+                          </div>
                       </div>
                     </div>
                 </section>
 
-                <section style="display: none;" section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                <section style="display: none;" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
                   <div class="mdl-card__supporting-text">
                     <h4>Alethzero Instructions</h4>
