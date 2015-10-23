@@ -172,7 +172,7 @@
                           </form>
                           <br>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue()"/>
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue();updateMarginValue()"/>
                                   <label class="mdl-textfield__label" for="price">Trading Price of Futures Contract $</label>
                                   <!--span>Enter future/predetermined price</span-->
                               </div>
@@ -204,6 +204,20 @@
                                     }
                                 </script>
                             </div>
+
+                          <div>
+                                <p style="font-size:16px"><i class="material-icons indigo500">security</i> Initial Margin (15%): <input type="text" value="" id="marginValueText" size="13" style="border: 0px;" disabled/></p>
+                                <script type="text/javascript">
+                                    function updateMarginValue() {
+                                        var price = document.getElementById('price').value;
+                                        var units = document.getElementById('units').value;
+                                        var contractValue = parseFloat(price, 10) * parseInt(units, 10);
+                                        var marginValue = contractValue * 0.15
+                                        var id = 'marginValueText';
+                                        document.getElementById(id).value = '$' + marginValue.toFixed(2); 
+                                    }
+                                </script>
+                            </div>
                       </div>
                     </div>
                 </section>
@@ -211,7 +225,7 @@
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                       <div class="mdl-card__supporting-text">
-                        <h4>Expiry Date & Margin</h4>
+                        <h4>Expiry Date</h4>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                   <input class="mdl-textfield__input" type="date" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
                                   <label class="mdl-textfield__label" for="deliverydate"></label>
