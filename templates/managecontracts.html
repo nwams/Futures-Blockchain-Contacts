@@ -2,120 +2,180 @@
 <html lang="en">
 
 <head>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
-<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 
 
-
 <body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
-<div><img src = https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=800&q=50&w=1200 id="bgpic" alt=""></div>
+<div><img src=https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=800&q=50&w=1200
+          id="bgpic" alt=""></div>
 
 <div class="mdl-layout__container has-scrolling-header">
 
-<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
 
-<header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-<div class="mdl-layout--large-screen-only mdl-layout__header-row">
-</div>
-<div class="mdl-layout--large-screen-only mdl-layout__header-row">
-<h3>Blockchain Futures Contracts</h3>
-</div>
-<div class="mdl-layout--large-screen-only mdl-layout__header-row">
-</div>
-<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-<a href="/futureethereum" class="mdl-layout__tab">Create Contract</a>
-<a href="#features" class="mdl-layout__tab">Approve Contracts</a>
-<a href="/managecontracts" class="mdl-layout__tab is-active">Manage Contracts</a>
-</div>
-</header>
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                <h3>Blockchain Futures Contracts</h3>
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+                <a href="/futureethereum" class="mdl-layout__tab">Create Contract</a>
+                <a href="#features" class="mdl-layout__tab">Approve Contracts</a>
+                <a href="/managecontracts" class="mdl-layout__tab is-active">Manage Contracts</a>
+            </div>
+        </header>
 
-<main class="mdl-layout__content">
+        <main class="mdl-layout__content">
+            <div class="mdl-layout__tab-panel is-active" id="overview">
 
-<div class="mdl-layout__tab-panel is-active" id="overview">
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Welcome Zayd</h4>
 
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-<div class="mdl-card mdl-cell mdl-cell--12-col">
-<div class="mdl-card__supporting-text">
-<h4>Welcome Zayd</h4>
-<p>Your account number: 0xd6aaae06717f25095eab8250369a437e549160a4</p>
-<div>Here are your active Smart Contracts:</div>
+                            <p>Your account number: 0xd6aaae06717f25095eab8250369a437e549160a4</p>
 
-</div>
-</div>
-</section>
-
-
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-<div class="mdl-card mdl-cell mdl-cell--12-col">
-<div class="mdl-card__supporting-text">
-<table width="100%">
-        <col style="width:88%">
-        <col style="width:12%" align="center">
-<tr>
-<th> <font size="5">Contracts Pending Aproval   </font></th>
-<th> <font size="5">      Status   </font> </th>
-</tr>
-<tr><td><br><br><b>Buyer Ethereum Address:</b>       0xd6aaae06717f25095eab8250369a437e549160a4<br><b>Seller Ethereum Address:</b>     0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5<br><b>Ethereum Transaction Address:</b>         g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab<br><b>Commodity:</b>
-Brent Crude, Barrels<br><b>Units:</b>    1000<br><b>Future Price:</b>    USD 53.05 per Barrel<br><b>Margin:</b>     USD 2.00<br><b>Delivery Date:</b>    January 2, 2016<br><b>Spot Price Source:</b>    New York Mercantile Exchange (NYMEX)<br><br></td><td>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()" style="    margin-bottom: 26px;
-    float: right;
-    display: block;margin-right: 4px; background: #4CAF50;">Approve</button>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="float: right;
-    display: block;
-    margin-top: 30px;
-    margin-left: -20px;
-    width: 80px; background: #F44336
-    "onclick="add()">Cancel</button></td></tr>
+                            <div>Here are your active Smart Contracts:</div>
+                        </div>
+                    </div>
+                </section>
 
 
-</table>
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <table width="100%">
+                                <col style="width:88%">
+                                <col style="width:12%" align="center">
+                                <tr>
+                                    <th><h4>Contracts Pending Aproval</h4></font></th>
+                                    <th> <h4>Action</h4> </th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <br>
+                                        <br>
+                                        <b>Buyer Ethereum Address: </b>0xd6aaae06717f25095eab8250369a437e549160a4
+                                        <br>
+                                        <b>Seller Ethereum Address: </b>0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5
+                                        <br>
+                                        <b>Ethereum Transaction Address :</b>g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab
+                                        <br>
+                                        <b>Commodity: </b>Brent Crude, Barrel
+                                        <br>
+                                        <b>Units:</b>1000
+                                        <br>
+                                        <b>Future Price: </b>USD 53.05 per Barrel
+                                        <br>
+                                        <b>Margin: </b>USD 2.00
+                                        <br>
+                                        <b>Delivery Date:</b>January 2, 2016
+                                        <br>
+                                        <b>Spot Price Source: </b>New York Mercantile Exchange (NYMEX)
+                                        <br>
+                                        <br>
+                                    </td>
+                                    <td>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                                onclick="add()"
+                                                style="margin-bottom: 26px; float: right; display: block;margin-right: 4px; background: #4CAF50;">
+                                            Approve
+                                        </button>
+                                        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                                style="float: right; display: block; margin-top: 30px; margin-left: -20px; width: 80px; background: #F44336"
+                                                onclick="add()">
+                                            Cancel
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </section>
 
-</div>
-</div>
-</section>
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <table class="mdl-data-table mdl-js-data-table" width="100%">
+                                <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric"> <h4>Contract History</h4></th>
+                                    <th class="mdl-data-table__cell--non-numeric"><h4>Status</h4></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <b>Buyer Ethereum Address:</b> 0xd6aaae06717f25095eab8250369a437e549160a4
+                                        <br>
+                                        <b>Seller Ethereum Address:</b>
+                                        0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5
+                                        <br>
+                                        <b>Ethereum Transaction Address: </b>g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab
+                                        <br>
+                                        <b>Commodity: </b>Brent Crude, Barrels<br><b>Units: </b>1000
+                                        <br>
+                                        <b>Future Price: </b>USD 53.05 per Barrel
+                                        <br>
+                                        <b>Margin:</b> USD 2.00
+                                        <br>
+                                        <b>Delivery Date:</b>January 2, 2016
+                                        <br>
+                                        <b>Spot Price Source: </b>New York Mercantile Exchange (NYMEX)
+                                        <br>
+                                        <br>
+                                    </td>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <h5 class="mdl-color-text--teal-500">Executed</h5>
 
+                                    </td>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">
+                                        <b>Buyer Ethereum Address:</b>0xd6aaae06717f25095eab8250369a437e549160a4
+                                        <br>
+                                        <b>Seller Ethereum Address:</b>0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5
+                                        <br>
+                                        <b>Ethereum Transaction Address:</b>g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab
+                                        <br>
+                                        <b>Commodity: </b>Brent Crude, Barrels
+                                        <br>
+                                        <b>Units:</b>1000
+                                        <br>
+                                        <b>Future Price: </b>USD 53.05 per Barrel
+                                        <br>
+                                        <b>Margin: </b>USD 2.00
+                                        <br>
+                                        <b>Delivery Date: </b>January 2, 2016
+                                        <br>
+                                        <b>Spot Price Source: </b>New York Mercantile Exchange (NYMEX)
+                                        <br>
+                                        <br>
+                                    </td>
+                                    <td>
+                                        <h5 class="mdl-color-text--blue-grey">Pending</h5>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+                <br>
+                <br>
+            </div>
+        </main>
 
-<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-<div class="mdl-card mdl-cell mdl-cell--12-col">
-<div class="mdl-card__supporting-text">
-<table width="100%">
-        <col style="width:88%">
-        <col style="width:12%" align="center">
-<tr>
-<th> <font size="5">Contract History   </font></th>
-<th> <font size="5">      Status   </font> </th>
-</tr>
-<tr><td><br><br><b>Buyer Ethereum Address:</b>       0xd6aaae06717f25095eab8250369a437e549160a4<br><b>Seller Ethereum Address:</b>     0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5<br><b>Ethereum Transaction Address:</b>         g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab<br><b>Commodity:</b>
-Brent Crude, Barrels<br><b>Units:</b>    1000<br><b>Future Price:</b>    USD 53.05 per Barrel<br><b>Margin:</b>     USD 2.00<br><b>Delivery Date:</b>    January 2, 2016<br><b>Spot Price Source:</b>    New York Mercantile Exchange (NYMEX)<br><br></td><td>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()" style="    margin-bottom: 26px;
-    float: right;
-    display: block;margin-right: 4px; background: #4CAF50;">Executed</button>
-
-
-    <tr><td><br><br><b>Buyer Ethereum Address:</b>       0xd6aaae06717f25095eab8250369a437e549160a4<br><b>Seller Ethereum Address:</b>     0xa8ade7feab1ece71446bed25fa0cf6745c19c3d5<br><b>Ethereum Transaction Address:</b>         g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab<br><b>Commodity:</b>
-Brent Crude, Barrels<br><b>Units:</b>    1000<br><b>Future Price:</b>    USD 53.05 per Barrel<br><b>Margin:</b>     USD 2.00<br><b>Delivery Date:</b>    January 2, 2016<br><b>Spot Price Source:</b>    New York Mercantile Exchange (NYMEX)<br><br></td><td>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()" style="    margin-bottom: 26px;
-    float: right;
-    display: block;margin-right: 4px; background: #2196F3;">Pending</button>
-
-
-
-</table>
-
-</div>
-</div>
-</section>
-
-</div>
-
-</main>
-
-</div>
+    </div>
 </div>
 
 </body>
