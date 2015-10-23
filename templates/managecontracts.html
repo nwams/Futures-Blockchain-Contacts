@@ -1,34 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    </head>
+<head>
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+<link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 
-<body>
 
-    <div class="container">
-        <div class="header">
-            <nav>
-                <ul class="nav nav-pills pull-right">
-                    <li role="presentation" class="active"><a href="/">Home</a>
-                    </li>
-                    <li role="presentation"><a href="/login">Log In</a>
-                    </li>
-                    <li role="presentation"><a href="/logout">Log Out</a>
-                    </li>
-<li role="presentation"><a href="/register">Register</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
 
-  <h1>Manage Contracts</h1>
+<body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
+<div><img src = https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=800&q=50&w=1200 id="bgpic" alt=""></div>
 
+<div class="mdl-layout__container has-scrolling-header">
+
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
+
+<header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+</div>
+<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+<h3>Blockchain Futures Contracts</h3>
+</div>
+<div class="mdl-layout--large-screen-only mdl-layout__header-row">
+</div>
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+<a href="#overview" class="mdl-layout__tab">Create Contract</a>
+<a href="#features" class="mdl-layout__tab">Approve Contracts</a>
+<a href="#features" class="mdl-layout__tab is-active">Manage Contracts</a>
+</div>
+</header>
+
+<main class="mdl-layout__content">
+
+<div class="mdl-layout__tab-panel is-active" id="overview">
+
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+<div class="mdl-card mdl-cell mdl-cell--12-col">
+<div class="mdl-card__supporting-text">
+<h1>Manage Contracts</h1>
+</div>
+</div>
+</section>
+
+                
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+<div class="mdl-card mdl-cell mdl-cell--12-col">
+<div class="mdl-card__supporting-text">
 <table>
    <tr>
         <th> Buyer Ethereum Address:    </th>
@@ -38,17 +59,18 @@
         <th> Ethereum Transaction Address:    </th>
         <td> g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab </td>
         <th> Commodity:    </th>
-        <td> Nachos, Barrels </td>
+        <td> Brent Crude, Barrels </td>
         <th> Units:    </th>
         <td> 1000 </td>
         <th> Future Price:    </th>
-        <td> 33 USD per Barrel</td>
+        <td> 33.05 USD per Barrel</td>
         <th> Margin:    </th>
         <td> 2 </td>
         <th> Delivery Date:    </th>
         <td> January 2, 2016 </td>
         <th> Spot Price Source:    </th>
         <td> New York Mercantile Exchange  (NYMEX) </td>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">Approve</button>
    </tr>
    <tr>
         <th> Buyer Ethereum Address:    </th>
@@ -58,22 +80,31 @@
         <th> Ethereum Transaction Address:    </th>
         <td> g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab </td>
         <th> Commodity:    </th>
-        <td> Bunny Skulls, Tons </td>
+        <td> Gold, Troy Ounces </td>
         <th> Units:    </th>
-        <td> 1 </td>
+        <td> 100 </td>
         <th> Future Price:    </th>
-        <td> 3 USD per Ton</td>
+        <td> 386.13 USD per Ton</td>
         <th> Margin:    </th>
         <td> .25 </td>
         <th> Delivery Date:    </th>
         <td> November 15, 2016 </td>
         <th> Spot Price Source:    </th>
         <td> Chicago Board of Trade (CBOT) </td>
+<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">Cancel</button>
    </tr>
-
-    </body>
-
 </table>
+</div>
+</div>
+</section>
 
+</div>
+
+</main>
+
+</div>
+</div>
+
+</body>
 </html>
 
