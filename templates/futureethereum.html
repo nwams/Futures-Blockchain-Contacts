@@ -68,7 +68,7 @@
                       <div class="mdl-card__supporting-text">
                         <h4>Commodity Information</h4>
                           <form id="commoditieslist" name="commoditieslist">
-                              <select id="commodity" onchange="updateText('commodity')">
+                              <select id="commodity" onchange="loadUnits()">
                                 <option value disabled selected> -- Choose Your Commodity -- </option>
                                 <option value="corn">Corn</option>
                                 <option value="oats">Oats</option>
@@ -155,7 +155,7 @@
                           </form>
                           <br>
                           <form id="measurementslist" name="measurementslist">
-                              <select id="measurement" onchange="updateText('measurement')">
+                              <select id="measurement" disabled onchange="updateText('measurement')">
                                   <option value disabled selected> -- Unit of Measurement -- </option>
                                   <option value="gallon">Gallons</option>
                                   <option value="kiloliter">Kiloliters</option>
@@ -181,9 +181,16 @@
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                   <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/></p>
                                       <script type="text/javascript">
-                                          function updateText(type) {
-                                              var id = type+'Text';
-                                              document.getElementById(id).value = document.getElementById(type).value;
+
+                                          function loadUnits()
+                                          {
+
+                                            var e = document.getElementById("commodity");
+                                            var selectedCommodity = e.options[e.selectedIndex].value;
+                                            alert(selectedCommodity);
+
+                                            document.getElementById("measurement").disabled = false;
+
                                           }
                                       </script>
                               </div>
