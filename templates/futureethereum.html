@@ -9,8 +9,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
-                    <div><img src = https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=2&fit=crop&fm=jpg&h=800&q=50&w=1200 id="bgpic" alt=""></div>
-
+    <div><img src = https://picjumbo.imgix.net/IMG_5539.jpg?q=40&w=1650&sharp=30 id="bgpic" alt=""></div>
     <div class="mdl-layout__container has-scrolling-header">
             <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
@@ -33,8 +32,8 @@
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
                             <h4>Welcome Zayd</h4>
-                            <div><p>Start creating your smart contract.</p></div>
-                            <div><p>Account number: d6aaae06717f25095eab8250369a437e549160a4</p></div>
+                            <p>Your account number: d6aaae06717f25095eab8250369a437e549160a4</p>
+                            <div>Start creating your Smart Contract.</div>
                         </div>
                     </div>
                 </section>
@@ -171,12 +170,12 @@
                           </form>
                           <br>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any"/>
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue()"/>
                                   <label class="mdl-textfield__label" for="price">Locked in price $</label>
                                   <span>Enter future/predetermined price</span>
                               </div>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/>
+                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/></p>
                                       <script type="text/javascript">
                                           function updateText(type) {
                                               var id = type+'Text';
@@ -184,6 +183,18 @@
                                           }
                                       </script>
                               </div>
+                            <div>
+                                <p style="font-size:16px">Contract value: <input type="text" value="" id="contractValueText" size="13" style="border: 0px;" disabled/></p>
+                                <script type="text/javascript">
+                                    function updateContractValue() {
+                                        var price = document.getElementById('price').value;
+                                        var units = document.getElementById('units').value;
+                                        var contractValue = parseFloat(price, 10) * parseInt(units, 10);
+                                        var id = 'contractValueText';
+                                        document.getElementById(id).value = '$' + contractValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    }
+                                </script>
+                            </div>
                       </div>
                     </div>
                 </section>
