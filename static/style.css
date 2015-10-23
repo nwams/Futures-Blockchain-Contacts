@@ -210,3 +210,5 @@ input[type="text"] {
 .mdl-demo .mdl-menu__container {
   z-index: 99;
 }
+.material-icons{ vertical-align: middle; }
+.material-icons.indigo500 { color: #3F51B5; }
