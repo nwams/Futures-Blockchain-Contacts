@@ -36,8 +36,8 @@
                         <div class="mdl-card__supporting-text">
 
                             <h4>Welcome Zayd</h4>
-                            <div><p>Start creating your smart contract.</p></div>
-                            <div><p>Account number: d6aaae06717f25095eab8250369a437e549160a4</p></div>
+                            <p>Your account number: d6aaae06717f25095eab8250369a437e549160a4</p>
+                            <div>Start creating your Smart Contract.</div>
                         </div>
                     </div>
                 </section>
@@ -174,12 +174,12 @@
                           </form>
                           <br>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any"/>
+                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue()"/>
                                   <label class="mdl-textfield__label" for="price">Locked in price $</label>
                                   <span>Enter future/predetermined price</span>
                               </div>
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/>
+                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px;" disabled/></p>
                                       <script type="text/javascript">
                                           function updateText(type) {
                                               var id = type+'Text';
@@ -187,6 +187,18 @@
                                           }
                                       </script>
                               </div>
+                            <div>
+                                <p style="font-size:16px">Contract value: <input type="text" value="" id="contractValueText" size="13" style="border: 0px;" disabled/></p>
+                                <script type="text/javascript">
+                                    function updateContractValue() {
+                                        var price = document.getElementById('price').value;
+                                        var units = document.getElementById('units').value;
+                                        var contractValue = parseFloat(price, 10) * parseInt(units, 10);
+                                        var id = 'contractValueText';
+                                        document.getElementById(id).value = '$' + contractValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                    }
+                                </script>
+                            </div>
                       </div>
                     </div>
                 </section>

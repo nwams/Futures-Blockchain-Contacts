@@ -19,6 +19,9 @@ html, body {
   margin: 0;
   padding: 0;
 }
+input[type="text"] {
+    font-size:16px
+}
 .mdl-demo .mdl-layout__header-row {
   padding-left: 40px;
 }
