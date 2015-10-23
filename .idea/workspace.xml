@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4460d397-b158-4700-892d-6bc8f8509215" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/IMG_5539.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/commodities.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/commodities.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/home.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/icon" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/material.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/material.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/futureethereum_files/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/futureethereum.html" afterPath="$PROJECT_DIR$/templates/futureethereum.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/style.css" afterPath="$PROJECT_DIR$/static/style.css" />
     </list>
     <ignored path="blockchain-derivatives.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,10 +46,9 @@
       <file leaf-file-name="futureethereum.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/futureethereum.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456" vertical-offset="5556" max-vertical-offset="10179">
-              <caret line="216" column="106" selection-start-line="216" selection-start-column="106" selection-end-line="216" selection-end-column="106" />
+            <state vertical-scroll-proportion="-7.2173915" vertical-offset="8485" max-vertical-offset="8991">
+              <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
               <folding>
-                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -520,7 +530,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="8856">
           <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -558,7 +567,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="8856">
           <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -586,7 +594,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="8856">
           <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -635,7 +642,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="243" max-vertical-offset="8856">
           <caret line="9" column="81" selection-start-line="9" selection-start-column="81" selection-end-line="9" selection-end-column="81" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -717,12 +723,12 @@
         <state vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="351">
           <caret line="7" column="122018" selection-start-line="7" selection-start-column="122007" selection-end-line="7" selection-end-column="122018" />
           <folding>
-            <element signature="e#50523#52224#2" expanded="true" />
-            <element signature="e#52230#53931#2" expanded="true" />
-            <element signature="e#54263#55160#1" expanded="true" />
-            <element signature="e#55252#56149#1" expanded="true" />
-            <element signature="e#71310#71911#2" expanded="true" />
-            <element signature="e#71917#72518#2" expanded="true" />
+            <element signature="e#50523#52224#2" expanded="false" />
+            <element signature="e#52230#53931#2" expanded="false" />
+            <element signature="e#54263#55160#1" expanded="false" />
+            <element signature="e#55252#56149#1" expanded="false" />
+            <element signature="e#71310#71911#2" expanded="false" />
+            <element signature="e#71917#72518#2" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -766,10 +772,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/futureethereum.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456" vertical-offset="5556" max-vertical-offset="10179">
-          <caret line="216" column="106" selection-start-line="216" selection-start-column="106" selection-end-line="216" selection-end-column="106" />
+        <state vertical-scroll-proportion="-7.2173915" vertical-offset="8485" max-vertical-offset="8991">
+          <caret line="179" column="0" selection-start-line="179" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#1;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#p#0;n#div#2;n#div#0;n#div#0;n#section#2;n#div#0;n#main#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

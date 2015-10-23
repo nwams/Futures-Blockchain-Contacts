@@ -1,6 +1,6 @@
 #imports
 import os
-from flask import Flask, render_template, request, session, g, redirect, url_for, abort, flash
+from flask import Flask, render_template, request, session, send_from_directory, g, redirect, url_for, abort, flash
 #from sqlite3 import dbapi2 as sqlite3
 #from contextlib import closing
 #from flask.ext.sqlalchemy import SQLAlchemy
@@ -131,6 +131,11 @@ def main_future():
 def show_user_profile(username):
     # show the user profile for that user
     return 'User %s' % username
+
+@app.route('/commodities')
+def load_commodities():
+    # show the user profile for that user
+    return send_from_directory('data', 'commodities.csv')
 
 #we will use this to add the info of a new user to the DB:
 #new_user = User('admin', 'admin@example.com')
