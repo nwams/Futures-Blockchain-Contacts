@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
     <head>
-
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='material.min.css') }}">
+        <link rel=stylesheet type=text/css href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-deep_purple.min.css">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
         <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
         <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
+
     <script type="text/javascript">
     var commoditiesArray = new Array();
     function test()
       {
-
               $.ajax({
                   type: "GET",
                   url: "/commodities",
@@ -23,11 +21,9 @@
                   success: function(data) {processData(data);}
                });
 
-
           function unit(words) {
               var n = words.split(" ");
               return n[n.length - 1];
-
           }
 
           function processData(allText) {
@@ -36,8 +32,6 @@
               for (var i=1; i<allTextLines.length; i++) {
                  var vals = allTextLines[i].split(',');
                  commoditiesArray[vals[0]] =unit(vals[1])
-
-
               }
               for (var key in commoditiesArray) {
                   //alert(key +" "+unit(commoditiesArray[key]))
@@ -46,37 +40,53 @@
                   option.appendChild(document.createTextNode(key));
                   select.appendChild(option);
                 }
-
-
       }
     }
     test();
     </script>
-    <body class="mdl-demo mdl-color--grey-200 mdl-color-text--grey-700 mdl-base">
-                    <div><img src = https://picjumbo.imgix.net/IMG_5539.jpg?q=40&w=1650&sharp=30 id="bgpic" alt=""></div>
-    <div class="mdl-layout__container has-scrolling-header">
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-tabs is-upgraded" data-upgraded=",MaterialLayout">
 
+    <body class="mdl-demo mdl-color--grey-50 mdl-color-text--grey-700 mdl-base">
+    <div><img src = https://images.unsplash.com/photo-1444090542259-0af8fa96557e?dpr=2&fit=crop&fm=jpg&h=675&ixlib=rb-0.3.5&q=50&w=1300 id="bgpic" alt=""></div>
+    <div class="mdl-layout__container has-scrolling-header">
+            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded" >
                 <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-                    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                    <div class=" mdl-layout__header-row">
+                        <span class="mdl-layout-title">    Blockchain Futures Contracts</span>
+                        <!-- Add spacer, to align navigation to the right -->
+                        <div class="mdl-layout-spacer"></div>
+                        <nav class="mdl-navigation">
+                            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+                                <a href="#overview" class="mdl-layout__tab is-active">Create Contract</a>
+                                <a href="/managecontracts" class="mdl-layout__tab">Manage Contracts</a>
+                            </div>
+                        </nav>
                     </div>
-                    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                      <h3>Blockchain Futures Contracts</h3>
-                    </div>
-                    <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-                    </div>
-                    <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-                        <a href="#overview" class="mdl-layout__tab is-active">Create Contract</a>
-                        <a href="/managecontracts" class="mdl-layout__tab">Manage Contracts</a>
-                        </div>
                 </header>
+                <div class="demo-drawer mdl-layout__drawer mdl-color--indigo mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+          <img src="https://www.egr.uh.edu/sites/www.egr.uh.edu/files/enews/2014/images/0114nzeocha.jpg" class="demo-avatar">
+          <div class="demo-avatar-dropdown">
+            <span>nwams@cornell.com</span>
+            <div class="mdl-layout-spacer"></div>
+          </div>
+        </header>
+        <nav class="demo-navigation mdl-navigation mdl-color--white">
+            <a class="mdl-navigation__link" href="#overview"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>New Contract</a>
+            <a class="mdl-navigation__link" href="/managecontracts"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">work</i>Manage</a>
+            <a class="mdl-navigation__link" href="/managecontracts"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assignment_turned_in</i>Approved</a>
+            <a class="mdl-navigation__link" href="/managecontracts"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Rejected</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_balance</i>Balance</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_circle</i>Profile</a>
+            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
+        </nav>
+      </div>
+
           <main class="mdl-layout__content">
             <div class="mdl-layout__tab-panel is-active" id="overview">
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
-
-                            <h4>Welcome Nwamaka</h4>
+                            <h4>Welcome Nwamaka!</h4>
                             <p>Your account number: d6aaae06717f25095eab8250369a437e549160a4</p>
                             <div>Start creating your Smart Contract.</div>
                         </div>
@@ -84,30 +94,35 @@
                 </section>
 
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__media mdl-color--indigo mdl-color-text--grey-50">
+                            <h4>From / To</h4>
+                        </div>
                 <div class="mdl-card mdl-cell mdl-cell--12-col">
                   <div class="mdl-card__supporting-text">
-                    <h4>From / To</h4>
                       <form action="#">
                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" name="buyeraddress" id="buyeraddress" />
-                              <label class="mdl-textfield__label" for="buyeraddress">Buyer's 40 char ethereum address</label>
-                              <span>d6aaae06717f25095eab8250369a437e549160a4</span>
+                              <input class="mdl-textfield__input" type="text" name="buyeraddress" id="buyeraddress"/>
+                              <label class="mdl-textfield__label" for="buyeraddress">Buyer's Ethereum address</label>
                           </div>
                           <br>
                           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                               <input class="mdl-textfield__input" type="text" name="selleraddress" id="selleraddress" />
-                              <label class="mdl-textfield__label" for="selleraddress">Seller's 40 char ethereum address</label>
-                              <span>d6aaae06717f25095eab8250369a437e549160a4</span>
+                              <label class="mdl-textfield__label" for="selleraddress">Seller's Ethereum address</label>
                           </div>
                       </form>
                   </div>
                 </div>
+                    </div>
               </section>
 
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__media mdl-color--indigo mdl-color-text--grey-50">
+                            <h4>Commodity Information</h4>
+                        </div>
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
                       <div class="mdl-card__supporting-text">
-                        <h4>Commodity Information</h4>
                           <form id="commoditieslist" name="commoditieslist">
                               <select id="commodity" onchange="updateText()">
                                 <option value disabled selected> -- Choose Your Commodity -- </option>
@@ -118,9 +133,7 @@
                           <form action="#">
                               <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                   <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="units" />
-                                  <label class="mdl-textfield__label" for="units">How many would you like?</label>
-                                  <span>Enter a quantity</span>
-                                  <br>
+                                  <label class="mdl-textfield__label" for="units">Enter a Quantity</label>
                                   <span class="mdl-textfield__error">Input must be a number!</span>
                               </div>
                           </form>
@@ -172,18 +185,26 @@
                             </div>
                       </div>
                     </div>
+                        </div>
                 </section>
 
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__media mdl-color--indigo mdl-color-text--grey-50">
+                            <h4>Expiry Date</h4>
+                        </div>
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
                       <div class="mdl-card__supporting-text">
+                          Start date:
+                          <br>
+                          10/29/2015 stub stub
 
-                        <h4>Expiry Date</h4>
-
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                          <br>
+                          <br>
+                          Execution date
+                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                                   <input class="mdl-textfield__input" type="date" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
                                   <label class="mdl-textfield__label" for="deliverydate"></label>
-                                  <span>Delivery date</span>
                               </div>
                               <div>
                               Unix timestamp: <input type="text" value="" id="deliverydateTimestamp" style="border: 0px;" disabled/>
@@ -231,11 +252,11 @@
                           <br>
                           <div>
                               <br>
-                              Contract will be sent to seller for approval.
-                              <br>
                               <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">
                               Submit
                               </button>
+                              Contract will be sent to seller for approval.
+                              <br>
                           </div>
                       </div>
                     </div>
@@ -323,8 +344,6 @@
                         </div>
                     </div>
                 </section>
-                <br>
-                <br>
             </div>
           </main>
         </div>
