@@ -1,334 +1,417 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-    <head>
-        <link rel=stylesheet type=text/css href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-deep_purple.min.css">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
-        <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    </head>
+<head>
+    <link rel=stylesheet type=text/css
+          href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.indigo-deep_purple.min.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='home.css') }}">
+    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 
-    <script type="text/javascript">
+<script type="text/javascript">
     var commoditiesArray = new Array();
-    function test()
-      {
-              $.ajax({
-                  type: "GET",
-                  url: "/commodities",
-                  dataType: "text",
-                  success: function(data) {processData(data);}
-               });
+    function test() {
+        $.ajax({
+            type: "GET",
+            url: "/commodities",
+            dataType: "text",
+            success: function (data) {
+                processData(data);
+            }
+        });
 
-          function unit(words) {
-              var n = words.split(" ");
-              return n[n.length - 1];
-          }
+        function unit(words) {
+            var n = words.split(" ");
+            return n[n.length - 1];
+        }
 
-          function processData(allText) {
+        function processData(allText) {
             var select = document.getElementById("commodity")
-              var allTextLines = allText.split(/\r\n|\n/);
-              for (var i=1; i<allTextLines.length; i++) {
-                 var vals = allTextLines[i].split(',');
-                 commoditiesArray[vals[0]] =unit(vals[1])
-              }
-              for (var key in commoditiesArray) {
-                  //alert(key +" "+unit(commoditiesArray[key]))
-                  option = document.createElement('option');
-                  option.setAttribute('value', key);
-                  option.appendChild(document.createTextNode(key));
-                  select.appendChild(option);
-                }
-      }
+            var allTextLines = allText.split(/\r\n|\n/);
+            for (var i = 1; i < allTextLines.length; i++) {
+                var vals = allTextLines[i].split(',');
+                commoditiesArray[vals[0]] = unit(vals[1])
+            }
+            for (var key in commoditiesArray) {
+                //alert(key +" "+unit(commoditiesArray[key]))
+                option = document.createElement('option');
+                option.setAttribute('value', key);
+                option.appendChild(document.createTextNode(key));
+                select.appendChild(option);
+            }
+        }
     }
     test();
-    </script>
+</script>
 
-    <body class="mdl-demo mdl-color--grey-50 mdl-color-text--grey-700 mdl-base">
-    <div><img src = https://images.unsplash.com/photo-1444090542259-0af8fa96557e?dpr=2&fit=crop&fm=jpg&h=675&ixlib=rb-0.3.5&q=50&w=1300 id="bgpic" alt=""></div>
-    <div class="mdl-layout__container has-scrolling-header">
-            <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded" >
-                <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-                    <div class=" mdl-layout__header-row">
-                        <span class="mdl-layout-title">    Blockchain Futures Contracts</span>
-                        <!-- Add spacer, to align navigation to the right -->
-                        <div class="mdl-layout-spacer"></div>
-                        <nav class="mdl-navigation">
-                            <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-                                <a href="#overview" class="mdl-layout__tab is-active">Create Contract</a>
-                                <a href="/managecontracts" class="mdl-layout__tab">Manage Contracts</a>
-                            </div>
-                        </nav>
-                    </div>
-                </header>
-                <div class="demo-drawer mdl-layout__drawer mdl-color--indigo mdl-color-text--blue-grey-50">
-        <header class="demo-drawer-header">
-          <img src="https://www.egr.uh.edu/sites/www.egr.uh.edu/files/enews/2014/images/0114nzeocha.jpg" class="demo-avatar">
-          <div class="demo-avatar-dropdown">
-            <span>nwams@cornell.com</span>
-            <div class="mdl-layout-spacer"></div>
-          </div>
+<body class="mdl-demo mdl-color--black mdl-color-text--grey-400 mdl-base">
+<div class="mdl-layout__container has-scrolling-header">
+    <div><img src=http://netdna.webdesignerdepot.com/uploads/2015/07/animated-low-poly-svg-background-generator.jpg
+              id="bgpic" alt=""></div>
+    <!-- http://netdna.webdesignerdepot.com/uploads/2015/07/animated-low-poly-svg-background-generator.jpg
+    https://upload.wikimedia.org/wikipedia/commons/b/b8/Sao_Paulo_Stock_Exchange.jpg
+    -->
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout is-upgraded">
+        <header class="mdl-layout__header mdl-layout__header--transparent mdl-layout__header--scroll">
+            <div class=" mdl-layout__header-row">
+                <span class="mdl-layout-title">    Blockchain Futures Contracts</span>
+            </div>
         </header>
-        <nav class="demo-navigation mdl-navigation mdl-color--white">
-            <a class="mdl-navigation__link" href="#overview"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">add</i>New Contract</a>
-            <a class="mdl-navigation__link" href="/managecontracts"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">work</i>Manage</a>
-            <a class="mdl-navigation__link" href="/managecontracts"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">assignment_turned_in</i>Approved</a>
-            <a class="mdl-navigation__link" href="/managecontracts"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Rejected</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_balance</i>Balance</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">account_circle</i>Profile</a>
-            <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">help_outline</i><span class="visuallyhidden">Help</span></a>
-        </nav>
-      </div>
+        <div class="demo-drawer mdl-layout__drawer mdl-color--indigo mdl-color-text--blue-grey-50">
+            <header class="demo-drawer-header">
+                <img src="https://www.egr.uh.edu/sites/www.egr.uh.edu/files/enews/2014/images/0114nzeocha.jpg"
+                     class="demo-avatar">
 
-          <main class="mdl-layout__content">
+                <div class="demo-avatar-dropdown">
+                    <span>nwams@cornell.edu</span>
+
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </header>
+            <nav class="demo-navigation mdl-navigation mdl-color--white">
+                <a class="mdl-navigation__link" href="#overview"><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                                    role="presentation">add</i>New Contract</a>
+                <a class="mdl-navigation__link" href="/managecontracts"><i
+                        class="mdl-color-text--blue-grey-400 material-icons" role="presentation">work</i>Manage</a>
+                <a class="mdl-navigation__link" href="/managecontracts"><i
+                        class="mdl-color-text--blue-grey-400 material-icons"
+                        role="presentation">assignment_turned_in</i>Approved</a>
+                <a class="mdl-navigation__link" href="/managecontracts"><i
+                        class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Rejected</a>
+                <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                           role="presentation">account_balance</i>Balance</a>
+                <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                           role="presentation">account_circle</i>Profile</a>
+                <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons"
+                                                           role="presentation">help_outline</i>Contact us</a>
+            </nav>
+        </div>
+
+
+        <main class="mdl-layout__content">
             <div class="mdl-layout__tab-panel is-active" id="overview">
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--black">
                         <div class="mdl-card__supporting-text">
                             <h4>Welcome Nwamaka!</h4>
+
                             <p>Your account number: d6aaae06717f25095eab8250369a437e549160a4</p>
+
                             <div>Start creating your Smart Contract.</div>
                         </div>
                     </div>
                 </section>
 
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--black">
                         <div class="mdl-card__media mdl-color--indigo mdl-color-text--grey-50">
-                            <h4>From / To</h4>
+                            <h4>Buyer / Seller</h4>
                         </div>
-                <div class="mdl-card mdl-cell mdl-cell--12-col">
-                  <div class="mdl-card__supporting-text">
-                      <form action="#">
-                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" name="buyeraddress" id="buyeraddress"/>
-                              <label class="mdl-textfield__label" for="buyeraddress">Buyer's Ethereum address</label>
-                          </div>
-                          <br>
-                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" name="selleraddress" id="selleraddress" />
-                              <label class="mdl-textfield__label" for="selleraddress">Seller's Ethereum address</label>
-                          </div>
-                      </form>
-                  </div>
-                </div>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--black">
+                            <div class="mdl-card__supporting-text" style="font-size: 16px">
+                                Are you buying or selling? &nbsp;
+
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
+                                    <input type="radio" id="option-1" class="mdl-radio__button" name="options" value="Buying"
+                                           checked/>
+                                    <span class="mdl-radio__label">Buying &nbsp;</span>
+                                </label>
+                                <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
+                                    <input type="radio" id="option-2" class="mdl-radio__button" name="options"
+                                           value="Selling"/>
+                                    <span class="mdl-radio__label">Selling</span>
+                                </label>
+
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-textfield-wide mdl-js-textfield mdl-textfield--floating-label"
+                                         style="display: none" id="buyerbox">
+                                        <input class="mdl-textfield__input" type="text" name="buyeraddress"
+                                               id="buyeraddress"/>
+                                        <label class="mdl-textfield__label" for="buyeraddress">Buyer's
+                                            Ethereum address</label>
+                                    </div>
+                                    <div class="mdl-textfield mdl-textfield-wide mdl-js-textfield mdl-textfield--floating-label"
+                                         id="sellerbox">
+                                        <input class="mdl-textfield__input" type="text" name="selleraddress"
+                                               id="selleraddress"/>
+                                        <label class="mdl-textfield__label" for="selleraddress">Seller's Ethereum
+                                            address</label>
+                                    </div>
+                                </form>
+                                <script>
+                                    $(function () {
+                                        $('input[name="options"]').on('click', function () {
+                                            if ($(this).val() == 'Selling') {
+                                                $('#buyerbox').show();
+                                                $('#sellerbox').hide();
+                                            }
+                                            else {
+                                                $('#sellerbox').show();
+                                                $('#buyerbox').hide();
+                                            }
+                                        });
+                                    });
+                                </script>
+
+                            </div>
+                        </div>
                     </div>
-              </section>
+                </section>
 
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--black">
                         <div class="mdl-card__media mdl-color--indigo mdl-color-text--grey-50">
                             <h4>Commodity Information</h4>
                         </div>
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
-                      <div class="mdl-card__supporting-text">
-                          <form id="commoditieslist" name="commoditieslist">
-                              <select id="commodity" onchange="updateText()">
-                                <option value disabled selected> -- Choose Your Commodity -- </option>
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--black">
+                            <div class="mdl-card__supporting-text">
+                                <form id="commoditieslist" name="commoditieslist">
+                                    <select id="commodity" onchange="updateText()">
+                                        <option value disabled selected> -- Choose Your Commodity --</option>
 
-                              </select>
-                          </form>
-                          <br>
-                          <form action="#">
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="units" />
-                                  <label class="mdl-textfield__label" for="units">Enter a Quantity</label>
-                                  <span class="mdl-textfield__error">Input must be a number!</span>
-                              </div>
-                          </form>
+                                    </select>
+                                </form>
+                                <br>
+
+                                <form action="#">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                        <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                               id="units"/>
+                                        <label class="mdl-textfield__label" for="units">Enter a Quantity</label>
+                                        <span class="mdl-textfield__error">Input must be a number!</span>
+                                    </div>
+                                </form>
 
 
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 
-                                  <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="price" step="any" onchange="updateContractValue();updateMarginValue()"/>
-                                  <label class="mdl-textfield__label" for="price">Trading Price of Futures Contract $</label>
-                                  <!--span>Enter future/predetermined price</span-->
+                                    <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                           id="price" step="any" onchange="updateContractValue();updateMarginValue()"/>
+                                    <label class="mdl-textfield__label" for="price">Trading Price of Futures Contract
+                                        $</label>
+                                    <!--span>Enter future/predetermined price</span-->
 
-                              </div>
-                              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <p>per <input type="text" value="" id="measurementText" size="13" style="border: 0px; width: 200px" disabled/></p>
-                                      <script type="text/javascript">
-                                          function updateText() {
+                                </div>
+                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                                    <p>per <input type="text" value="" id="measurementText" size="13"
+                                                  style="border: 0px; width: 200px; background-color: #000000;"
+                                                  disabled/></p>
+                                    <script type="text/javascript">
+                                        function updateText() {
                                             var option = document.getElementById("commodity").value
                                             document.getElementById("measurementText").value = commoditiesArray[option]
-                                          }
-                                      </script>
-                              </div>
-                            <div>
-                                <p style="font-size:16px"><i class="material-icons indigo500">work</i> Contract value: <input type="text" value="" id="contractValueText" size="13" style="border: 0px;" disabled/></p>
-                                <script type="text/javascript">
-                                    function updateContractValue() {
-                                        var price = document.getElementById('price').value;
-                                        var units = document.getElementById('units').value;
-                                        var contractValue = parseFloat(price, 10) * parseInt(units, 10);
-                                        var id = 'contractValueText';
-                                        document.getElementById(id).value = '$' + contractValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                                    }
+                                        }
+                                    </script>
+                                </div>
+                                <div>
+                                    <p style="font-size:16px"><i class="material-icons indigo500">work</i> Contract
+                                        value: <input class="mdl-color--black" type="text" value=""
+                                                      id="contractValueText" size="20"
+                                                      style="border: 0px; font-size:16px" disabled/></p>
+                                    <script type="text/javascript">
+                                        function updateContractValue() {
+                                            var price = document.getElementById('price').value;
+                                            var units = document.getElementById('units').value;
+                                            var contractValue = parseFloat(price, 10) * parseInt(units, 10);
+                                            var id = 'contractValueText';
+                                            document.getElementById(id).value = '$' + contractValue.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                                        }
+                                    </script>
+                                </div>
 
-
-                                </script>
+                                <div>
+                                    <p style="font-size:16px"><i class="material-icons indigo500">security</i> Initial
+                                        Margin (15%): <input class="mdl-color--black" type="text" value=""
+                                                             id="marginValueText" size="13"
+                                                             style="border: 0px; font-size:16px" disabled/></p>
+                                    <script type="text/javascript">
+                                        function updateMarginValue() {
+                                            var price = document.getElementById('price').value;
+                                            var units = document.getElementById('units').value;
+                                            var contractValue = parseFloat(price, 10) * parseInt(units, 10);
+                                            var marginValue = contractValue * 0.15
+                                            var id = 'marginValueText';
+                                            document.getElementById(id).value = '$' + marginValue.toFixed(2);
+                                        }
+                                    </script>
+                                </div>
                             </div>
-
-                          <div>
-                                <p style="font-size:16px"><i class="material-icons indigo500">security</i> Initial Margin (15%): <input type="text" value="" id="marginValueText" size="13" style="border: 0px;" disabled/></p>
-                                <script type="text/javascript">
-                                    function updateMarginValue() {
-                                        var price = document.getElementById('price').value;
-                                        var units = document.getElementById('units').value;
-                                        var contractValue = parseFloat(price, 10) * parseInt(units, 10);
-                                        var marginValue = contractValue * 0.15
-                                        var id = 'marginValueText';
-                                        document.getElementById(id).value = '$' + marginValue.toFixed(2); 
-                                    }
-                                </script>
-                            </div>
-                      </div>
-                    </div>
                         </div>
+                    </div>
                 </section>
 
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--black">
                         <div class="mdl-card__media mdl-color--indigo mdl-color-text--grey-50">
                             <h4>Expiry Date</h4>
                         </div>
-                    <div class="mdl-card mdl-cell mdl-cell--12-col">
-                      <div class="mdl-card__supporting-text">
-                          Start date:
-                          <br>
-                          10/29/2015 stub stub
+                        <div class="mdl-card mdl-cell mdl-cell--12-col mdl-color--black">
+                            <div class="mdl-card__supporting-text" style="font-size:16px">
+                                Start date: &nbsp; <p style="font-size:16px" id="date"></p>
+                                <script type="text/javascript">
+                                    document.getElementById('date').innerHTML = Date();
+                                </script>
+                                <br>
+                                <div>
+                                    Contract executes at 9:30 AM EST on 3rd Friday in month. <br>Set contract execution date:
 
-                          <br>
-                          <br>
-                          Execution date
-                          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                  <input class="mdl-textfield__input" type="date" pattern="-?[0-9]*(\[0-9]+)?" name="deliverydate" id="deliverydate" onchange="createTimestamp('deliverydate')"/>
-                                  <label class="mdl-textfield__label" for="deliverydate"></label>
-                              </div>
-                              <div>
-                              Unix timestamp: <input type="text" value="" id="deliverydateTimestamp" style="border: 0px;" disabled/>
-                              <script type="text/javascript">
-                                  function createTimestamp(type) {
-                                      var deliveryDate = document.getElementById('deliverydate').value
-                                      var currentUnix = Math.round(+new Date()/1000);
-                                      var deliveryUnix = (parseInt(deliveryDate, 10) * 24 * 60 * 60) + parseInt(currentUnix, 10)
-                                      var id = type+'Timestamp';
-                                      document.getElementById(id).value = deliveryUnix;
-                                  }
-                              </script>
-                              </div>
-                              <br>
-                          <br>
-                          <br>
-                          You're Done With The First Part! Time to convert it to Ethereum’s Solidity Language
-                          <br>
-                          <br>
-                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">
-                              Compile Your Contract
-                          </button>
-                          <br>
-                          <br>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 
-                          <script>
-                              function add() {
-                                  var price = document.getElementById('price').value;
-                                  var units = document.getElementById('units').value;
-                                  var contractValue = parseFloat(price, 10) * parseInt(units, 10);
-                                  var buyerAddress = document.getElementById('buyeraddress').value;
-                                  var sellerAddress = document.getElementById('selleraddress').value;
-                                  var commodity2 = document.getElementById('commodity').value;
-                                  var measurement2 = document.getElementById('measurementText').value;
-                                  var unitsString = units.toString();
-                                  var assetString = unitsString+measurement2+commodity2;
-                                  var deliverydateTimestamp2 = document.getElementById('deliverydateTimestamp').value;
-                                  var margin2 = document.getElementById('marginValueText').value;
-                                  document.getElementById("contractfield").value = "contract MyFuture{\n\naddress buyer = msg.sender;\naddress seller = "+buyerAddress+";\nvar contractvalue = "+contractValue+";\nasset= "+assetString+";\nuint constant deliverydate ="+deliverydateTimestamp2+";\nbool cancelled = false;\n"+sellerAddress+".send("+margin2+");\n\nfunction myDeliveryDate(transactionId, spotPrice){\nif((msg.value>= contractvalue) && (now => deliverydate) && cancelled == false) {\n"+sellerAddress+".send(msg.value);\nsendareceiptofthetransactiontotheprimisee;}\n\nfunction myCancel(){\n"+sellerAddress+".send("+margin2+");suicide(buyerAddress);}\n\n}";
-                              }
-                          </script>
-                          <textarea rows="20" cols="80" type="text" id="contractfield" disabled></textarea>
+                                        <input class="mdl-textfield__input" type="date" pattern="-?[0-9]*(\[0-9]+)?"
+                                               name="deliverydate" id="deliverydate"
+                                               onchange="createTimestamp('deliverydate')"/>
+                                        <label class="mdl-textfield__label" for="deliverydate"></label>
+                                    </div>
+                                    <div>
+                                        Unix timestamp: <input class="mdl-color--black" type="text" value=""
+                                                               id="deliverydateTimestamp"
+                                                               style="border: 0px; font-size:16px" disabled/>
+                                        <script type="text/javascript">
+                                            function createTimestamp(type) {
+                                                var deliveryDate = document.getElementById('deliverydate').value
+                                                var currentUnix = Math.round(+new Date() / 1000);
+                                                var deliveryUnix = (parseInt(deliveryDate, 10) * 24 * 60 * 60) + parseInt(currentUnix, 10)
+                                                var id = type + 'Timestamp';
+                                                document.getElementById(id).value = deliveryUnix;
+                                            }
+                                        </script>
+                                    </div>
+                                    <br>
+                                </div>
+                                <br>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                        onclick="add()">
+                                    Compile Your Contract
+                                </button>
+                                <br>
+                                <br>
 
-                          <br>
-                          <br>
-                          <div>
-                              <br>
-                              <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add()">
-                              Submit
-                              </button>
-                              Contract will be sent to seller for approval.
-                              <br>
-                          </div>
-                      </div>
-                    </div>
+                                <script>
+                                    function add() {
+                                        var price = document.getElementById('price').value;
+                                        var units = document.getElementById('units').value;
+                                        var contractValue = parseFloat(price, 10) * parseInt(units, 10);
+                                        var buyerAddress = document.getElementById('buyeraddress').value;
+                                        var sellerAddress = document.getElementById('selleraddress').value;
+                                        var commodity2 = document.getElementById('commodity').value;
+                                        var measurement2 = document.getElementById('measurementText').value;
+                                        var unitsString = units.toString();
+                                        var assetString = unitsString + measurement2 + commodity2;
+                                        var deliverydateTimestamp2 = document.getElementById('deliverydateTimestamp').value;
+                                        var margin2 = document.getElementById('marginValueText').value;
+                                        document.getElementById("contractfield").value = "contract MyFuture{\n\naddress buyer = msg.sender;\naddress seller = " + buyerAddress + ";\nvar contractvalue = " + contractValue + ";\nasset= " + assetString + ";\nuint constant deliverydate =" + deliverydateTimestamp2 + ";\nbool cancelled = false;\n" + sellerAddress + ".send(" + margin2 + ");\n\nfunction myDeliveryDate(transactionId, spotPrice){\nif((msg.value>= contractvalue) && (now => deliverydate) && cancelled == false) {\n" + sellerAddress + ".send(msg.value);\nsendareceiptofthetransactiontotheprimisee;}\n\nfunction myCancel(){\n" + sellerAddress + ".send(" + margin2 + ");suicide(buyerAddress);}\n\n}";
+                                    }
+                                </script>
+                                <textarea class="mdl-color--black" rows="20" cols="80" type="text" id="contractfield"
+                                          style="font-size:12px" disabled></textarea>
+
+                                <br>
+                                <br>
+
+                                <div>
+                                    <br>
+                                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                            onclick="add()">
+                                        Submit
+                                    </button>
+                                    Contract will be sent to seller for approval.
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
                 </section>
 
                 <section style="display: none;" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-                <div class="mdl-card mdl-cell mdl-cell--12-col">
-                  <div class="mdl-card__supporting-text">
-                    <h4>Alethzero Instructions</h4>
-                      Alethzero is Ethereum's C++ GUI.
-                      <br>
-                      Download Alethzero here: <a>https://github.com/ethereum/alethzero</a>
-                      <br>
-                      <br>
-                      <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-                          <thead>
-                            <tr>
-                              <th class="mdl-data-table__cell--non-numeric">Check the boxes below as you complete each step in order.</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td class="mdl-data-table__cell--non-numeric">1. &nbsp;Send an unaddressed transaction with this code in it's data field</td>
-                            </tr>
-                            <tr>
-                              <td class="mdl-data-table__cell--non-numeric">2. &nbsp;In the amount field, endow your contract with an amount of ethere greater than the sum of your margin contract value</td>
-                            </tr>
-                            <tr>
-                              <td class="mdl-data-table__cell--non-numeric">3. &nbsp;Send the transaction. Doing so will inject your contract onto the blockchain</td>
-                            </tr>
-                            <tr>
-                              <td class="mdl-data-table__cell--non-numeric">4. &nbsp;A transaction address will be generated. Grab the transaction address and spot price.<br> When the delivery date arrives and you wish to execute your contract, paste the transaction address <br>and spot price in the next section.</td>
-                            </tr>
-                          </tbody>
-                      </table>
-                  </div>
-                </div>
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Alethzero Instructions</h4>
+                            Alethzero is Ethereum's C++ GUI.
+                            <br>
+                            Download Alethzero here: <a>https://github.com/ethereum/alethzero</a>
+                            <br>
+                            <br>
+                            <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                                <thead>
+                                <tr>
+                                    <th class="mdl-data-table__cell--non-numeric">Check the boxes below as you complete
+                                        each step in order.
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">1. &nbsp;Send an unaddressed
+                                        transaction with this code in it's data field
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">2. &nbsp;In the amount field, endow
+                                        your contract with an amount of ethere greater than the sum of your margin
+                                        contract value
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">3. &nbsp;Send the transaction. Doing
+                                        so will inject your contract onto the blockchain
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="mdl-data-table__cell--non-numeric">4. &nbsp;A transaction address will be
+                                        generated. Grab the transaction address and spot price.<br> When the delivery
+                                        date arrives and you wish to execute your contract, paste the transaction
+                                        address <br>and spot price in the next section.
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </section>
 
                 <section style="display: none" class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
                             <h4>Execute the Contract!</h4>
+
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                              <input class="mdl-textfield__input" type="text" name="transactionid" id="transactionid"/>
-                              <label class="mdl-textfield__label" for="transactionid">60 character transaction address</label>
-                              <span>Example: g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab</span>
+                                <input class="mdl-textfield__input" type="text" name="transactionid"
+                                       id="transactionid"/>
+                                <label class="mdl-textfield__label" for="transactionid">60 character transaction
+                                    address</label>
+                                <span>Example: g6aaae06717f25095eab8250369a437e549160a4g6aaae06717f25095eab</span>
                             </div>
                             <br>
+
                             <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="spotprice" step="any"/>
+                                <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?"
+                                       id="spotprice" step="any"/>
                                 <label class="mdl-textfield__label" for="spotprice">Enter spot price $</label>
                                 <span>Current price of the commodity</span>
                             </div>
                             <br>
-                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="add2()">
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                                    onclick="add2()">
                                 Generate code to send transaction
                             </button>
                             <br>
                             <br>
                             <script>
                                 function add2() {
-                                var transactionId = document.getElementById('transactionid').value;
-                                var spotPrice = document.getElementById('spotprice').value;
-                                document.getElementById("contractfield2").value = "contract MyMaturity{\n\nMyFuture feed;\n\nfunction setFeed(address addr){feed = MyFuture(addr);}\n\nfunction callFeed(){feed.MyDeliveryDate();}\n\ncallFeed("+transactionId+","+spotPrice+");\n\n}";
-                                document.getElementById("contractfield3").value = "contract myCancellation{\n\nMyFuture feed;\n\nfunction setFeed(address add){feed = MyFuture(addr);}\n\nfunction callFeed(){feed.myCancel();}\n\ncallFeed();\n\n}";
+                                    var transactionId = document.getElementById('transactionid').value;
+                                    var spotPrice = document.getElementById('spotprice').value;
+                                    document.getElementById("contractfield2").value = "contract MyMaturity{\n\nMyFuture feed;\n\nfunction setFeed(address addr){feed = MyFuture(addr);}\n\nfunction callFeed(){feed.MyDeliveryDate();}\n\ncallFeed(" + transactionId + "," + spotPrice + ");\n\n}";
+                                    document.getElementById("contractfield3").value = "contract myCancellation{\n\nMyFuture feed;\n\nfunction setFeed(address add){feed = MyFuture(addr);}\n\nfunction callFeed(){feed.myCancel();}\n\ncallFeed();\n\n}";
                                 }
                             </script>
                             <textarea rows="15" cols="80" type="text" id="contractfield2" disabled></textarea>
                             <br>
                             <br>
                             <br>
+
                             <p style="font-size:16px">Final step :) paste this code in <a>www.blah-blah-blah.com</a></p>
                         </div>
                     </div>
@@ -337,7 +420,8 @@
                     <div class="mdl-card mdl-cell mdl-cell--12-col">
                         <div class="mdl-card__supporting-text">
                             <h4>Cancellation</h4>
-                            Note: if you want to cancel your future's contract, send a transaction, addressed to the transaction ID and paste the code below into the data field
+                            Note: if you want to cancel your future's contract, send a transaction, addressed to the
+                            transaction ID and paste the code below into the data field
                             <br>
                             <br>
                             <textarea rows="12" cols="80" type="text" id="contractfield3" disabled></textarea>
@@ -345,8 +429,8 @@
                     </div>
                 </section>
             </div>
-          </main>
-        </div>
+        </main>
     </div>
-    </body>
+</div>
+</body>
 </html>
