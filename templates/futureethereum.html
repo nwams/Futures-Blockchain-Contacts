@@ -222,7 +222,19 @@
                                         }
                                     </script>
                                 </div>
+                                <div>
+                                    <p style="font-size:16px"><i class="material-icons indigo500">call_made</i> Limit Up (15%): <input class="mdl-color--black" type="text" value=""
+                                                             id="upLimitValueText" size="13"
+                                                             style="border: 0px; font-size:16px" disabled/></p>
+                                    <p style="font-size: 10px; margin-top: -20px; margin-left: 29px;"></i>Note: Limit Up is the maximum amount by which the price of a futures contract may advance in one trading day.</p>
 
+                                </div>
+                                <div>
+                                    <p style="font-size:16px"><i class="material-icons indigo500">call_received</i> Limit Down (10%): <input class="mdl-color--black" type="text" value=""
+                                                             id="downLimitValueText" size="13"
+                                                             style="border: 0px; font-size:16px" disabled/></p>
+                                    <p style="font-size: 10px; margin-top: -20px; margin-left: 29px;"></i> Note: Limit Down is the maximum amount by which the price of a futures contract may decline in one trading day.</p>
+                                </div>
                                 <div>
                                     <p style="font-size:16px"><i class="material-icons indigo500">security</i> Initial
                                         Margin (15%): <input class="mdl-color--black" type="text" value=""
@@ -234,8 +246,16 @@
                                             var units = document.getElementById('units').value;
                                             var contractValue = parseFloat(price, 10) * parseInt(units, 10);
                                             var marginValue = contractValue * 0.15
+                                            var upValue = contractValue * 1.15
+                                            var downValue = contractValue * 0.90
                                             var id = 'marginValueText';
                                             document.getElementById(id).value = '$' + marginValue.toFixed(2);
+
+                                            var id = 'downLimitValueText';
+                                            document.getElementById(id).value = '$' + downValue.toFixed(2);
+
+                                            var id = 'upLimitValueText';
+                                            document.getElementById(id).value = '$' + upValue.toFixed(2);
                                         }
                                     </script>
                                 </div>
