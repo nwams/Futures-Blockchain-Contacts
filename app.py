@@ -120,7 +120,7 @@ def manage_contracts():
     return render_template('managecontracts.html')
 
 @app.route('/market')
-def manage_contracts():
+def market():
     return render_template('market.html')
 
 @app.route('/youhaveacontracttoapprove')
