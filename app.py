@@ -119,6 +119,10 @@ def main():
 def manage_contracts():
     return render_template('managecontracts.html')
 
+@app.route('/market')
+def manage_contracts():
+    return render_template('market.html')
+
 @app.route('/youhaveacontracttoapprove')
 def contract_to_approve():
     return render_template('youhaveacontracttoapprove.html')
